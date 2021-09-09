@@ -7,41 +7,49 @@
     <meta name="keywords" content="Сайт визитка, разработка сайтов ...">
     <meta name="robots" content="noindex, nofollow">
     <meta property="og:title" content="Это моя первая страница"> 
-
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Александр Лобанов - Веб-разработчик</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
-<body background="https://www.peredvizhnik.ru/upload/iblock/579/
-bumaga_dlya_akvareli_watercolour_studio_200g_kv_m_500kh700mm_grain_fin_srednee_zerno_khlopok_25.jpg">
+<body> <!-- background="https://www.peredvizhnik.ru/upload/iblock/579/
+bumaga_dlya_akvareli_watercolour_studio_200g_kv_m_500kh700mm_grain_fin_srednee_zerno_khlopok_25.jpg"-->
 
     <header>
         <nav>
             <div class="logo">Александр Лобанов</div>
-            <div class="menu"><ul>
-                <li>Обо мне</li>
-                <li>Услуги</li>
-                <li>Кейсы</li>
-                <li>Прайс</li>
-                <li>Отзывы</li>
-                <li>Контакты</li>
-            </ul></div>
+            <div class="menu">
+                <ul>
+                    <li>Обо мне</li>
+                    <li>Услуги</li>
+                    <li>Кейсы</li>
+                    <li>Прайс</li>
+                    <li>Отзывы</li>
+                    <li>Контакты</li>
+                </ul>
+            </div>
         </nav>
     </header>
 
-    <div class="main"><div class="title__container">
+    <div class="main">
+        <div class="title__container">
         <h1>Привет <br> Я Александр Лобанов</h1>
         <h4>Фулл стек веб-разработчик</h4>
         <input type="button" value="Обо мне">
         <input type="button" value="Мои работы">
         </div>
-        <img src="img/mainphoto.png" alt="Основное фото">
-    </div><!--также можно поместить всё в main вплоть до footer-->
+    </div>
 
     <div class="aboutme">
         <h2>Обо мне</h2>
-        <img src="img/линия.png" alt="Черта заголовка">
-        <img src="miniphoto.png" alt="Фото в кружке">
+        <p>
+            <img src="img/линия.png" alt="Черта заголовка">
+        </p>
+        <p>
+            <img class="img1" src="img/пареньмини.png" alt="Фото в кружке">
+        </p>
+        <div class="aboutmeinfo">
         <p>
            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
            Ipsa similique, molestias dignissimos expedita mollitia inventore natus laudantium iste!
@@ -55,6 +63,8 @@ bumaga_dlya_akvareli_watercolour_studio_200g_kv_m_500kh700mm_grain_fin_srednee_z
            Totam dolorum, omnis natus eos dolore libero.
            Totam dolorum autem facere culpa praesentium, facilis magni cum nesciunt?
         </p>
+        </div>
+        <button><img src="img/иконка_скачать.png" alt="иконка"> Скачать резюме</button>
         <input type="button" value="Скачать резюме">
     </div>
 
@@ -106,7 +116,8 @@ bumaga_dlya_akvareli_watercolour_studio_200g_kv_m_500kh700mm_grain_fin_srednee_z
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias deleniti, 
             eos amet provident eum dolores. Consectetur, ipsa nobis!
         </p>
-        <img src="img/кейс.png" alt="Фото кейса">
+        <img src="img/кейс_портфолио.png" alt="Фото кейса" class="cases_img">
+    </div>    
         <div class="example">
             <h3>Client</h3>
             <p>Какая-то компания</p>
@@ -122,11 +133,10 @@ bumaga_dlya_akvareli_watercolour_studio_200g_kv_m_500kh700mm_grain_fin_srednee_z
                 reiciendis fugit eos ipsum eum excepturi fugiat deleniti quas hic facilis? 
                 Ab fugit quidem, esse inventore consequuntur possimus quaerat.
             </p>
-        </div>
     </div>
 
     <div class="price">
-        <h2>Расчёт Стоимости</h2>
+    <h2>Расчёт Стоимости</h2>
         <h3>Тип Сайта</h3>
         <select name="type[]">
             <option disabled selected value="Выберите пункт">Выберите пункт...</option>
@@ -153,10 +163,11 @@ bumaga_dlya_akvareli_watercolour_studio_200g_kv_m_500kh700mm_grain_fin_srednee_z
             <option value="Респонсив вёрстка">Респонсив вёрстка</option>
             <option value="Отдельная мобильная вёрстка">Отдельная мобильная вёрстка</option>
         </select>
+        <div class="price-calc">
+            <p>Сроки <span>0</span></p>
+            <p>Стоимость <span>0</span></p>
+        </div>
     </div>
-    <p>Место для черты</p>
-    <p>Сроки <span>0</span></p>
-    <p>Стоимость <span>0</span></p>
 
     <div class="statistics">
         <h2>Немного статистики</h2>
@@ -190,7 +201,9 @@ bumaga_dlya_akvareli_watercolour_studio_200g_kv_m_500kh700mm_grain_fin_srednee_z
     <div class="feedback">
         <h2>Отзывы</h2>
         <img src="img/линия.png" alt="Черта заголовка">
-        <img src="img/фотка_отзыва.png" alt="Отзыв">
+        <p>
+            <img src="img/фотка_отзыва.png" alt="Отзыв">
+        </p>
         <p>
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Alias debitis, 
             beatae neque modi laborum aperiam harum nesciunt ab voluptate, 
@@ -199,7 +212,7 @@ bumaga_dlya_akvareli_watercolour_studio_200g_kv_m_500kh700mm_grain_fin_srednee_z
         <p>
             Михаил,Ген директор ПАО "Газпром"
         </p>
-        <div>
+        <div class="fb-list">
             <ul>
                 <li>
                     <img src="img/круг_оранж.png" alt="Оранжевый">
@@ -215,15 +228,14 @@ bumaga_dlya_akvareli_watercolour_studio_200g_kv_m_500kh700mm_grain_fin_srednee_z
     </div>
 
     <footer>
-        <nav>
-            <div class="contacts">
+        <div class="contacts">
                 <h2>Мои контакты</h2>
                 <img src="img/линия.png" alt="Черта заголовка">
                 <p>
                     Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
                     Eos quibusdam facere eum expedita maxime omnis?
                 </p>
-                <div>
+                <div class="con1">
                     <ul>
                         <li>
                             <img src="img/гео.png" alt="гео">
@@ -245,19 +257,21 @@ bumaga_dlya_akvareli_watercolour_studio_200g_kv_m_500kh700mm_grain_fin_srednee_z
                         </li>
                     </ul>
                 </div>
-            </div>
             <div class="message">
                 <h3>Оставьте мне сообщение</h3>
                 <form action="#">
-                    <input type="text" name="yourname" value="" placeholder="Имя">
-                    <input type="text" name="yourmail" value="" placeholder="Email">
                     <p>
-                        <textarea name="yourtext" id="" value="" placeholder="Сообщение" 
-                        cols="48" rows="5"></textarea>
+                        <input type="text" name="yourname" class="yourname" value="" placeholder="Имя">
+                        <input type="text" name="yourmail" class="yourmail" value="" placeholder="Email">
                     </p>
-                    <input type="submit" value="Отправить">
+                    <p>
+                        <textarea name="yourtext" class="yourtext" value="" placeholder="Сообщение"></textarea>
+                    </p>
+                    <p>
+                        <input type="submit" class="btn" value="Отправить">
+                    </p>
                 </form>
-            </div>
+            </div>     
             <div class="social_media">
                 <ul>
                     <li>
@@ -280,19 +294,16 @@ bumaga_dlya_akvareli_watercolour_studio_200g_kv_m_500kh700mm_grain_fin_srednee_z
                     </li>
                 </ul>
             </div>
-            <p>
-                <a href="javascript:window.open
-                ('https://yandex.ru/maps/213/moscow/?ll=37.626862%2C55.741303&mode=whatshere&whatshere%5Bpoint%5D=37.625669%2C55.741008&whatshere%5Bzoom%5D=18.09&z=18',
-                'maps', 'width=600,height=400')" class="location">
-                Моё местоположение</a>
-            </p>
-            <p>
-                <img src="img/карта.png" alt="карта">
-            </p>
-            <p>
+        </div>
+        <div class="geo">
+                <!--
+                    Место для карты
+                    <img src="img/bg-5map.jpg" alt="карта">
+                -->
+        </div>
+            <div class="copyright">
                 Copyright © 2021 Александр Лобанов. Design by Web.
-            </p>
-        </nav>
+            </div>
     </footer>
 </body>
 </html>

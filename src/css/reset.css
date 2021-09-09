@@ -1,0 +1,41 @@
+*{
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+*,*:before, *:after{
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;  /*высота и ширина элементов на странице*/
+}
+
+:focus, :active{outline: none;}
+a:focus, a:active{outline: none;}  /*ссылки и ссылки на классы нужно убрать по умолчанию*/
+
+nav, footer, header, aside{display: block;} /*чтобы все элементы были БЛОЧНЫМИ*/
+
+html, body{  /*общие параметры для всей страницы*/
+height:100%;
+width:100%;
+font-size: 100%;
+line-height: 1;
+font-size:14px;
+-ms-text-size-adjust: 100%;
+-moz-text-size-adjust: 100%;
+-webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea{font-family: inherit; /*текст наследования от родительского элемента css*/
+} 
+
+input::-ms-clear{display: none;} /*сброс всего по чуть чуть*/
+button{cursor: pointer;} /*курсор на кнопке - рука с пальцем*/
+button::-moz-focus-inner{padding: 0; border:0;} 
+a, a:visited{text-decoration: none; color: black;}
+a:hover{text-decoration: none;} /*нет подсветки анимации*/
+ul li{list-style: none;} /* нет точек в списке*/
+img{vertical-align: top;} /*для изображений выравнивание по центру*/
+
+
+h1,h2,h3,h4,h5,h6{font-size: inherit; font-weight: 400;} /*выровнять все заголовки*/
