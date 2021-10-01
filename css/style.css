@@ -1,0 +1,573 @@
+/*предлоадер*/
+.preloader {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 999999;/*влияет на плавность*/
+    display: flex;
+    align-items: center;
+    justify-content: center;  
+    background: #fff;
+    transition: all 2s;
+    opacity: 1;
+}
+.preloader-remove {
+    opacity: 0;
+    z-index: -10;
+}
+.preloader div {
+    border: 14px inset #FFF;
+    border-radius: 100%;
+    padding: 4px;
+    animation: preloader-spin 15s linear infinite;
+}
+@keyframes preloader-spin {
+    from { transform: rotate(0deg) }
+    to { transform: rotate(360deg) }
+}
+/*предлоадер*/
+body{
+    font-family: Arial, sans-serif;
+}
+nav{
+    width: 100%;
+    height: 60px;
+    background: #344051;
+    position: fixed; /*6 урок*/
+}
+.logo{
+    color: #fff;
+    font-size: 24px;
+    line-height: 60px;/*выравнивание по центру значение равное высоте блока*/
+    margin-left: 15%; /*398px; /*20%;*/
+    float: left; /*прижимает блок к левому краю*/
+    -webkit-animation: comming 5s ease;
+    -o-animation: comming 5s ease;
+    animation: comming 5s ease;
+    transition: color .5s, background 1s;
+}
+.logo:hover{
+    background: #42546e;/*#1c2534;*/
+    color: #e88604;
+}
+@keyframes comming{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+main{
+    width: 100%;
+    height: 100%;
+}
+.menu{
+    float: left;
+    margin-left: 15%; /*432px; /*22.5%;*/
+}
+.menu li{
+    float: left;
+    line-height: 60px;
+    color: #fff;
+    margin-right: 40px;
+    font-size: 16px;
+    text-transform: uppercase;
+    -webkit-animation: topshift 0.4s ease forwards;
+    -o-animation: topshift 0.4s ease forwards;
+    animation: topshift 0.4s ease forwards;
+    opacity: 0;
+}
+
+.menu li a{
+    transition: all 0.3s;
+    color: #fff;
+    transform: scale(1);
+    display: block;
+}
+.menu li a:visited{
+    color: #fff;
+}
+.menu li a:hover{
+    color: #e88604;
+}
+.menu li a:active{
+    transform: scale(1.2);
+}
+.menu li:nth-child(2){
+    animation-delay: 0.4s;
+}
+.menu li:nth-child(3){
+    animation-delay: 0.8s;
+}
+.menu li:nth-child(4){
+    animation-delay: 1.2s;
+}
+.menu li:nth-child(5){
+    animation-delay: 1.6s;
+}
+.menu li:nth-child(6){
+    animation-delay: 2.0s;
+}
+@keyframes topshift{
+    from{
+        opacity: 0;
+        margin-top: -80px;
+    }
+    to{
+        opacity: 1;
+        margin-top: 0px;
+    }
+}
+.main{
+    display: inline-block;
+    width: 100%;
+    height: 100%; /*calc(100% - 60px);*/
+    background: url(../img/тень.png)
+    0 calc(100% + 30px) no-repeat,/*тень*/ 
+  /*  url(../img/парень.png)
+    90% 100%/auto 85% no-repeat, /*расположение длины и ширины/размер длины и ширины*/
+    url(../img/bg-1hello.jpg)
+    center/cover no-repeat;/*фон*/
+}
+.main_photo{
+    width: 100%;
+    height: 238px;
+    float: right;
+    background: url(../img/парень.png)
+    95% 100%/auto 554px no-repeat;/*auto 85%*/
+    -webkit-animation: photomove 1s ease forwards;
+    -o-animation: photomove 1s ease forwards;
+    animation: photomove 1s ease forwards;
+    -webkit-animation-delay: 3s;
+    -o-animation-delay: 3s;
+    animation-delay: 3s;
+    opacity: 0;
+}
+@keyframes photomove{
+    from{
+        opacity: 0;
+        margin-right: -300px;
+    }
+    to{
+        opacity: 1;
+        margin-right: 1px;
+    }
+}
+.title__container{
+    float: left;
+    margin: 232px 0 0 232px; /*432px 0px 0px 404px;*/
+    color: #2c384a;
+    text-align: center;
+    opacity: 0;
+    -webkit-animation: titlemove 1s ease forwards;
+    -o-animation: titlemove 1s ease forwards;
+    animation: titlemove 1s ease forwards;
+    -webkit-animation-delay: 2.4s;
+    -o-animation-delay: 2.4s;
+    animation-delay: 2.4s;
+}
+.title__container h1{
+    font-size: 45px; /*60px*/
+    font-weight: bold;
+}
+.title__container h4{
+    margin-top: 15px;/*40px;*/
+    font-size: 19px;/*22px;*/
+    color: #79818d;
+}
+.title__container input{ /*важное и простое оформление*/
+    text-align: center;
+    height: 34px; /*40px;*/
+    border: 2px solid #6d7682;
+    border-radius: 5px;
+    background: none;
+    color: #6d7682;
+    font-size: 13px;
+    padding: 0 13px; /*0 16px;*/
+    margin: 24px 9px 0 9px;/*58px 14px 0 14px;*/
+}
+.title__container input{
+    /*transition: all 1s;*/
+    transform: scale(1);
+}
+.title__container input:hover{
+    background: #344051;
+    color: #fff;
+    transition: all 0.3s;
+}
+.title__container input:active{
+    transform: scale(1.1);
+}
+@keyframes titlemove{
+    from{
+        opacity: 0;
+        margin-left: -300px;
+    }
+    to{
+        opacity: 1;
+        margin-left: 232px;
+    }
+}
+
+/*ОКНО 2 Обо мне..................................................................................*/
+
+.aboutme{
+    text-align: center;
+}
+.aboutme h2{
+    margin: 108px 0 33px 0;
+    font-size: 33px;
+    text-transform: uppercase;
+    color: #263244;
+}
+.aboutme .img1{
+    margin: 94px 0 24px 0;
+}
+.aboutmeinfo p{
+    margin: auto; /*центр*/
+    padding-bottom: 34px;
+    width: 732px;
+    font-size: 17px;
+    text-align: left;
+    color: #3f495a;
+}
+.aboutme button{
+    height: 34px;
+    font-size: 16px;
+    color: #6f707e;
+    border: 2px solid #6f707e;
+    border-radius: 4px;
+    padding: 0 13px;
+    transform: scale(1);
+}
+.aboutme button:hover{
+    color: #fff;
+    background: #6f707e;
+    transition: all 0.3s;
+}
+.aboutme button:active{
+    transform: scale(1.1);
+}
+
+/*ОКНО 3 Что я умею.............................................................................*/
+
+.cando{
+    text-align: center;
+    height: 520px; /*520px*/
+    background: url(../img/bg-2cando.jpg)
+    center/100% 520px no-repeat;
+}
+.cando h2{
+    margin: 97px 0 33px 0;
+    padding-top: 107px;
+    font-size: 33px;
+    text-transform: uppercase;
+    color: #263244;
+}
+.skills{
+    /*float: left;*/
+    margin-left: 15%; /*416px;*/
+    margin-top: 100px;
+}
+.skills li{
+    float: left;
+    text-align: center;
+    width: 200px;
+    margin-right: 5%;/*82px;*/
+}
+.skills li img:hover{
+    animation: rubberBand;
+    animation-duration: 2s;
+}
+.skills h4{
+    font-size: 18px;
+    color: #cf7600;
+    margin: 40px 0 20px 0;
+}
+.skills p{
+    font-size: 16px;
+    color: #3f495a;
+}
+
+/*ОКНО 4 Кейсы...................................................................................*/
+
+.cases{
+    text-align: center;
+}
+.cases h2{
+    margin: 110px 0 33px 0;
+    font-size: 33px;
+    text-transform: uppercase;
+    color: #263244;
+}
+.cases>p{
+    margin: 40px auto;
+    color: #3f495a;
+}
+.cases_img{
+    width: 70%;
+    height: auto;
+}
+.example{
+    margin: 35px 15% 0;
+    width: 15%; /*287px*/ /*блоки по порядку: первый */
+    float: left; /*блоки по порядку: второй*/
+}
+.example h3{
+    font-size: 25px;
+    text-transform: uppercase;
+    color: #384354;
+    font-weight: bold;
+}
+.example p{
+    font-size: 16px;
+    color: #3f495a;
+    margin: 17px 0;
+}
+.example input{
+    color:#fff;
+    font-size: 20px;
+    text-transform: uppercase;
+    border: 1px solid #63b5ae;
+    background: #63b5ae;
+    border-radius: 4px;
+    height: 44px;
+    padding: 0 43px;
+    transform: scale(1);
+}
+.example input:hover{
+    background: #fff;
+    color: #63b5ae;
+    transition: all 0.3s;
+}
+.example input:active{
+    transform: scale(1.1);
+}
+.projectname{
+    margin: 35px 15% 0 0;
+    height: 195px;
+}
+.projectname h3{
+    font-size: 25px;
+    color: #384354;
+    margin-bottom: 5px;
+}
+.projectname p{
+    font-size: 20px;
+    color: #3f495a;
+    line-height: 25px;
+}
+
+/*ОКНО 5 Расчёт стоимости........................................................................*/
+
+.price{
+    margin: auto 25%;
+    width: 50%;
+}
+.price h2{
+    margin-top: 210px;
+    font-size: 45px;
+    color: #1c2534;
+    text-align: center;
+}
+.price h3{
+    margin: 65px auto 50px;
+    font-size: 29px;
+    color: #1c2534;
+    text-transform: uppercase;
+}
+.price select{
+    font-size: 16px;
+    color: #737373;
+    margin: auto 20px 0 31px;
+    padding-right: calc(50% - 20px);
+}
+.price-calc{
+    margin-top: 58px;
+    border-top: 2px solid #d1d1d1;
+}
+.price-calc p{
+    margin-top: 27px;
+    font-size: 20px;
+    color: #1c2534;
+    font-weight: bold;
+}
+.price-calc span{
+    float: right;
+}
+
+/*ОКНО 6 Немного статистики......................................................................*/
+
+.statistics{
+    text-align: center;
+    height: 500px;
+    background: url(../img/bg-3statistics.jpg)
+    center/100% 500px no-repeat;
+    margin-top: 155px;
+    background-attachment: fixed;
+}
+.statistics h2{
+    padding: 107px 0 33px 0;
+    font-size: 33px;
+    text-transform: uppercase;
+    color: #263244;
+}
+.achievements{
+    /*float: left;*/
+    margin-left: 15%; /*416px;*/
+    margin-top: 90px;
+}
+.achievements li{
+    float: left;
+    text-align: center;
+    width: 208px;
+    margin-right: 4%;/*82px;*/
+}
+.achievements li img:hover{
+    animation: heartBeat;
+    animation-duration: 2s;
+
+}
+.achievements h3{
+    margin: 33px auto 30px;
+    font-size: 37px;
+    color: #323d4f;
+}
+.achievements h4{
+    font-size: 16px;
+    color: #323d4f;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+/*ОКНО 7 Отзывы..................................................................................*/
+
+.feedback{
+    text-align: center;
+}
+.feedback h2{
+    margin: 131px 0 33px 0;
+    font-size: 33px;
+    text-transform: uppercase;
+    color: #263244;
+}
+.feedback>p>img{
+    margin: 58px 0 39px;
+}
+.feedback p{
+    margin: 0 auto 38px;
+    width: 690px;
+}
+.fb-list{
+    margin: 0 47%;
+}
+.fb-list li{
+    float: left;
+    margin-left: 14px;
+}
+
+/*ОКНО 8 Мои контакты............................................................................*/
+
+.contacts{
+    text-align: center;
+    height: 808px;
+    background: url(../img/bg-4contacts.jpg)
+    center/auto 808px no-repeat;
+    margin-top: 91px;
+    color: #fff;
+}
+.contacts h2{
+    padding: 107px 0 33px 0;
+    font-size: 33px;
+    text-transform: uppercase;
+}
+.contacts>p{
+    margin: 35px auto 47px;
+    font-size: 16px;
+}
+.con1{
+    margin-left: 22%;/*655px*/
+}
+.con1 li{
+    float: left;
+    text-align: center;
+    width: 187px;
+    height: 71px;
+    margin-right: 9%;
+    font-size: 16px;
+}
+.con1 p{
+    margin-top: 16px;
+}/*
+.Измерить всё с этого моммента
+}*/
+.message h3{
+    margin: 165px 0 47px;
+    text-align: center;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+.message p{
+    float: left;
+    margin: auto 30%;
+}
+.yourname, .yourmail{
+    width: 252px;/*330px*/
+    height: 30px;
+    padding-left: 10px;
+}
+.yourname{
+    margin-right: 29px;
+}
+.yourtext{
+    margin-top: 20px;
+    height: 100px;
+    width: 537px;
+    padding: 5px 0 0 10px;
+}
+.btn{
+    margin: 20px 0 0 225px;
+    background: none;
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 16px;/*измерить*/
+    transform: scale(1);
+    transition: all 0.3s;
+}
+.btn:hover{
+    color: #343f50;
+    background: #fff;
+    border: 2px solid #343f50;
+}
+.btn:active{
+    transform: scale(1.1);
+}
+.social_media{
+    margin-top: 290px;
+    margin-left: 34.6%;
+}
+.social_media li{
+    float: left;
+    margin-right: 55px;
+}
+
+/*ОКНО 9 Карта.................................................................................*/
+
+.geo{
+    background: url(../img/bg-5map.jpg)
+    center/auto 356px no-repeat;
+    height: 356px;
+}
+.copyright{
+    background: #354051;
+    height: 95px;
+    line-height: 95px;
+    text-align: center;
+    color: #fff;
+    font-size: 13px;
+}
