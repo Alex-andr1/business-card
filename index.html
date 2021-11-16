@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Это моя первая страница"> 
+    <meta name="author" content="Alexander">
+    <meta name="keywords" content="Сайт визитка, разработка сайтов ...">
+    <meta name="robots" content="noindex, nofollow">
+    <meta property="og:title" content="Это моя первая страница"> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Александр Лобанов - Веб-разработчик</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/animate.css"/> 
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="preloader">
+        <div>
+            <div>
+                <div>
+                    <div>
+                        <div>
+                            <div>
+                                <div>
+                                    <div>
+                                        <div></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+window.onload = function() {
+    document.querySelector('.preloader').classList.add("preloader-remove");
+};
+$(window).on('load', function () {
+	$('.preloader').addClass("preloader-remove"); 	
+});
+
+$(window).on('load', function () {
+    $('.preloader').addClass("preloader-remove");     
+});
+    </script>
+    <header>
+        <nav>
+            <div class="logo">Александр Лобанов</div>
+            <div class="menu">
+                <ul>
+                    <li><a href="#">Обо мне</a></li>
+                    <li><a href="#">Услуги</a></li>
+                    <li><a href="#">Кейсы</a></li>
+                    <li><a href="#">Прайс</a></li>
+                    <li><a href="#">Отзывы</a></li>
+                    <li><a href="#">Контакты</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+    <section class="main">
+        <div class="title__container">
+        <h1>Привет <br> Я Александр Лобанов</h1>
+        <h4>Фулл стек веб-разработчик</h4>
+        <input type="button" value="Обо мне">
+        <input type="button" value="Мои работы">
+        </div>
+        <div class="main_photo">
+            <!--сделать выдвижной-->
+        </div>
+    </section>
+    </main>
+
+    <div class="aboutme">
+        <h2>Обо мне</h2>
+        <p>
+            <img src="img/линия.png" alt="Черта заголовка">
+        </p>
+        <p>
+            <img class="img1" src="img/пареньмини.png" alt="Фото в кружке">
+        </p>
+        <div class="aboutmeinfo">
+        <p>
+           Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+           Ipsa similique, molestias dignissimos expedita mollitia inventore natus laudantium iste!
+           Totam dolorum, omnis natus eos dolore libero.
+           Totam dolorum autem facere culpa praesentium, facilis magni cum nesciunt?
+           Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+        </p>
+        <p>
+           Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+           Ipsa similique, molestias dignissimos expedita mollitia inventore natus laudantium iste!
+           Totam dolorum, omnis natus eos dolore libero.
+           Totam dolorum autem facere culpa praesentium, facilis magni cum nesciunt?
+        </p>
+        </div>
+        <button><img src="img/иконка_скачать.png" alt="иконка"> Скачать резюме</button>
+    </div>
+
+    <div class="cando">
+        <h2>Что я умею</h2>
+        <img src="img/линия.png" alt="Черта заголовка">
+        <div class="skills animate__animated animate__rubberBand">
+            <ul>
+                <li>
+                    <img src="img/ноут.png" alt="ноут">
+                    <h4>Веб-дизайн</h4>
+                    <p>
+                       Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                       Distinctio porro ducimus maiores temporibus hic id.
+                    </p>
+                </li>
+                <li>
+                    <img src="img/знак.png" alt="знак">
+                    <h4>Разработка</h4>
+                    <p>
+                       Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                       Distinctio porro ducimus maiores temporibus hic id.
+                    </p>
+                </li>
+                <li>
+                    <img src="img/ракета.png" alt="ракета">
+                    <h4>СЕО-оптимизация</h4>
+                    <p>
+                       Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                       Distinctio porro ducimus maiores temporibus hic id.
+                    </p>
+                </li>
+                <li>
+                    <img src="img/граммофон.png" alt="граммофон">
+                    <h4>Маркетинг</h4>
+                    <p>
+                       Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                       Distinctio porro ducimus maiores temporibus hic id.
+                    </p>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="cases">
+        <h2>Кейсы</h2>
+        <img src="img/линия.png" alt="Черта заголовка">
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias deleniti, 
+            eos amet provident eum dolores. Consectetur, ipsa nobis!
+        </p>
+        <img src="img/кейс_портфолио.png" alt="Фото кейса" class="cases_img">
+    </div>    
+        <div class="example">
+            <h3>Client</h3>
+            <p>Какая-то компания</p>
+            <h3>Website</h3>
+            <p>http://www.somedomain.com</p>
+            <input type="button" value="Visit Live Site">
+        </div>
+        <div class="projectname">
+            <h3>Название проекта</h3>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim earum officia
+                quis quasi repellendus praesentium accusantium voluptas quos harum deserunt numquam,
+                reiciendis fugit eos ipsum eum excepturi fugiat deleniti quas hic facilis? 
+                Ab fugit quidem, esse inventore consequuntur possimus quaerat.
+            </p>
+    </div>
+
+    <div class="price">
+    <h2>Расчёт Стоимости</h2>
+        <h3>Тип Сайта</h3>
+        <select name="type[]">
+            <option disabled selected value="Выберите пункт">Выберите пункт...</option>
+            <option value="Визитка">Визитка</option>
+            <option value="Корпоративный">Корпоративный сайт</option>
+            <option value="Лендинг">Лендинг</option>
+            <option value="Интернет-магазин">Интернет-магазин</option>
+            <option value="Интернет-витрина">Интернет-витрина</option>
+        </select>
+        <h3>Дизайн</h3>
+        <select name="design[]">
+            <option disabled selected value="Выберите пункт">Выберите пункт...</option>
+            <option value="Жёсткий">Жёсткий</option>
+            <option value="Гибкий">Гибкий</option>
+            <option value="Комбинированный">Комбинированный</option>
+            <option value="Интерфейсный">Интерфейсный</option>
+            <option value="Динамический">Динамический</option>
+            <option value="Полиграфический">Полиграфический</option>
+        </select>
+        <h3>Адаптивность</h3>
+        <select name="adapt[]">
+            <option disabled selected value="Выберите пункт">Выберите пункт...</option>
+            <option value="Адаптивная вёрстка">Адаптивная вёрстка</option>
+            <option value="Респонсив вёрстка">Респонсив вёрстка</option>
+            <option value="Отдельная мобильная вёрстка">Отдельная мобильная вёрстка</option>
+        </select>
+        <div class="price-calc">
+            <p>Сроки <span>0</span></p>
+            <p>Стоимость <span>0</span></p>
+        </div>
+    </div>
+
+    <div class="statistics">
+        <h2>Немного статистики</h2>
+        <img src="img/линия.png" alt="Черта заголовка">
+        <div class="achievements animate__animated animate__heartBeat">
+            <ul>
+                <li>
+                    <img src="img/смайл.png" alt="смайл">
+                    <h3>120</h3>
+                    <h4>Счастливых клиентов</h4>
+                </li>
+                <li>
+                    <img src="img/скобки.png" alt="скобки">
+                    <h3>4,600</h3>
+                    <h4>Часов работы</h4>
+                </li>
+                <li>
+                    <img src="img/галочка.png" alt="галочка">
+                    <h3>340</h3>
+                    <h4>Проектов завершено</h4>
+                </li>
+                <li>
+                    <img src="img/кубок.png" alt="кубок">
+                    <h3>23</h3>
+                    <h4>Наград получено</h4>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="feedback">
+        <h2>Отзывы</h2>
+        <img src="img/линия.png" alt="Черта заголовка">
+        <p>
+            <img src="img/фотка_отзыва.png" alt="Отзыв">
+        </p>
+        <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Alias debitis, 
+            beatae neque modi laborum aperiam harum nesciunt ab voluptate, 
+            eaque consequuntur similique officiis suscipit laudantium!
+        </p>
+        <p>
+            Михаил,Ген директор ПАО "Газпром"
+        </p>
+        <div class="fb-list">
+            <ul>
+                <li>
+                    <img src="img/круг_оранж.png" alt="Оранжевый">
+                </li>
+                <li>
+                    <img src="img/круг_серый.png" alt="Серый">
+                </li>
+                <li>
+                    <img src="img/круг_серый.png" alt="Серый">
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <footer>
+        <div class="contacts">
+                <h2>Мои контакты</h2>
+                <img src="img/линия.png" alt="Черта заголовка">
+                <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+                    Eos quibusdam facere eum expedita maxime omnis?
+                </p>
+                <div class="con1">
+                    <ul>
+                        <li>
+                            <img src="img/гео.png" alt="гео">
+                            <p>
+                                Москва <br>Софийская набережная 31
+                            </p>
+                        </li>
+                        <li>
+                            <img src="img/конверт.png" alt="конверт">
+                            <p>
+                                info@companyname.com
+                            </p>
+                        </li>
+                        <li>
+                            <img src="img/труба.png" alt="труба">
+                            <p>
+                                +7 (800) 555-35-55
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            <div class="message">
+                <h3>Оставьте мне сообщение</h3>
+                <form action="#">
+                    <p>
+                        <input type="text" name="yourname" class="yourname" value="" placeholder="Имя">
+                        <input type="text" name="yourmail" class="yourmail" value="" placeholder="Email">
+                    </p>
+                    <p>
+                        <textarea name="yourtext" class="yourtext" value="" placeholder="Сообщение"></textarea>
+                    </p>
+                    <p>
+                        <input type="button" class="btn" value="Отправить"><!--submit-->
+                    </p>
+                </form>
+            </div>     
+            <div class="social_media">
+                <ul>
+                    <li>
+                        <a href="https://ru-ru.facebook.com/"><img src="img/фб.png" alt="facebook"></a>
+                    </li>
+                    <li>
+                        <a href="https://twitter.com/"><img src="img/твитер.png" alt="twitter"></a>
+                    </li>
+                    <li>
+                        <a href="https://"><img src="img/мяч.png" alt="ball"></a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/"><img src="img/киса.png" alt="github"></a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/"><img src="img/инст.png" alt="instagram"></a>
+                    </li>
+                    <li>
+                        <a href="https://"><img src="img/ин.png" alt="in"></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="geo">
+                <!--
+                    Место для карты
+                    <img src="img/bg-5map.jpg" alt="карта">
+                -->
+        </div>
+            <div class="copyright">
+                Copyright © 2021 Александр Лобанов. Design by Web.
+            </div>
+    </footer>
+</body>
+</html>
