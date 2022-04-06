@@ -12,15 +12,14 @@
     <title>Александр Лобанов - Веб-разработчик</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css"> <!--всплывающее окно-->
     <link rel="stylesheet" href="css/animate.css"/> 
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <link rel="stylesheet" href="css/font-icomoon.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
-<!--заменить float: left на display: inline-block
-    в местах, где идёт смещение-->
 <body>
-    <div class="preloader">
+   <!-- <div class="preloader">
         <div>
             <div>
                 <div>
@@ -46,7 +45,7 @@ window.onload = function() {
 $(window).on('load', function () {
     $('.preloader').addClass("preloader-remove");     
 });
-    </script>
+    </script>-->
     <header>
         <nav>
             <div class="container">
@@ -57,12 +56,12 @@ $(window).on('load', function () {
                     offset-lg-1 d-none d-lg-block">
                         <div class="menu">
                         <ul>
-                            <li><a href="#">Обо мне</a></li>
-                            <li><a href="#">Услуги</a></li>
-                            <li><a href="#">Кейсы</a></li>
-                            <li><a href="#">Прайс</a></li>
-                            <li><a href="#">Отзывы</a></li>
-                            <li><a href="#">Контакты</a></li>
+                            <li><a href="#aboutme">Обо мне</a></li>
+                            <li><a href="#cando">Услуги</a></li>
+                            <li><a href="#cases">Кейсы</a></li>
+                            <li><a href="#price">Прайс</a></li>
+                            <li><a href="#statistics">Отзывы</a></li>
+                            <li><a href="#contacts">Контакты</a></li>
                         </ul>
                         </div>
                     </div>
@@ -75,12 +74,12 @@ $(window).on('load', function () {
                             </a>
                           
                             <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                              <li><a class="dropdown-item" href="#">Обо мне</a></li>
-                              <li><a class="dropdown-item" href="#">Услуги</a></li>
-                              <li><a class="dropdown-item" href="#">Кейсы</a></li>
-                              <li><a class="dropdown-item" href="#">Прайс</a></li>
-                              <li><a class="dropdown-item" href="#">Отзывы</a></li>
-                              <li><a class="dropdown-item" href="#">Контакты</a></li>
+                              <li><a class="dropdown-item" href="#aboutme">Обо мне</a></li>
+                              <li><a class="dropdown-item" href="#cando">Услуги</a></li>
+                              <li><a class="dropdown-item" href="#cases">Кейсы</a></li>
+                              <li><a class="dropdown-item" href="#price">Прайс</a></li>
+                              <li><a class="dropdown-item" href="#statistics">Отзывы</a></li>
+                              <li><a class="dropdown-item" href="#contacts">Контакты</a></li>
                             </ul>
                           </div>
                     </div>
@@ -112,73 +111,82 @@ $(window).on('load', function () {
     </section>
     </main>
 
-    <div class="aboutme">
-        <h2>Обо мне</h2>
-        <p>
-            <img src="img/линия.png" alt="Черта заголовка">
-        </p>
-        <p>
-            <img class="img1" src="img/пареньмини.png" alt="Фото в кружке">
-        </p>
-        <div class="aboutmeinfo">
-        <p>
-           Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-           Ipsa similique, molestias dignissimos expedita mollitia inventore natus laudantium iste!
-           Totam dolorum, omnis natus eos dolore libero.
-           Totam dolorum autem facere culpa praesentium, facilis magni cum nesciunt?
-           Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-        </p>
-        <p>
-           Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-           Ipsa similique, molestias dignissimos expedita mollitia inventore natus laudantium iste!
-           Totam dolorum, omnis natus eos dolore libero.
-           Totam dolorum autem facere culpa praesentium, facilis magni cum nesciunt?
-        </p>
+    <section class="section" id="aboutme">
+        <div class="aboutme">
+            <h2>Обо мне</h2>
+            <p>
+                <img src="img/линия.png" alt="Черта заголовка">
+            </p>
+            <p>
+                <img class="img1" src="img/пареньмини.png" alt="Фото в кружке">
+            </p>
+            <div class="aboutmeinfo">
+            <p>
+               Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+               Ipsa similique, molestias dignissimos expedita mollitia inventore natus laudantium iste!
+               Totam dolorum, omnis natus eos dolore libero.
+               Totam dolorum autem facere culpa praesentium, facilis magni cum nesciunt?
+               Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+            </p>
+            <p>
+               Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+               Ipsa similique, molestias dignissimos expedita mollitia inventore natus laudantium iste!
+               Totam dolorum, omnis natus eos dolore libero.
+               Totam dolorum autem facere culpa praesentium, facilis magni cum nesciunt?
+            </p>
+            </div>
+            <button><img src="img/иконка_скачать.png" alt="иконка"> Скачать резюме</button>
         </div>
-        <button><img src="img/иконка_скачать.png" alt="иконка"> Скачать резюме</button>
-    </div>
+    </section>
 
+    <section class="section"  id="cando">
     <div class="cando">
         <h2>Что я умею</h2>
         <img src="img/линия.png" alt="Черта заголовка">
-        <div class="skills animate__animated animate__rubberBand">
+        <div class="skills"> <!--animate__animated animate__rubberBand">-->
             <ul>
-                <li>
-                    <img src="img/ноут.png" alt="ноут">
-                    <h4>Веб-дизайн</h4>
-                    <p>
-                       Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
-                       Distinctio porro ducimus maiores temporibus hic id.
-                    </p>
-                </li>
-                <li>
-                    <img src="img/знак.png" alt="знак">
-                    <h4>Разработка</h4>
-                    <p>
-                       Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
-                       Distinctio porro ducimus maiores temporibus hic id.
-                    </p>
-                </li>
-                <li>
-                    <img src="img/ракета.png" alt="ракета">
-                    <h4>СЕО-оптимизация</h4>
-                    <p>
-                       Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
-                       Distinctio porro ducimus maiores temporibus hic id.
-                    </p>
-                </li>
-                <li>
-                    <img src="img/граммофон.png" alt="граммофон">
-                    <h4>Маркетинг</h4>
-                    <p>
-                       Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
-                       Distinctio porro ducimus maiores temporibus hic id.
-                    </p>
-                </li>
+                <div>
+                    <li>
+                        <img src="img/ноут.png" alt="ноут">
+                        <h4>Веб-дизайн</h4>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                            Distinctio porro ducimus maiores temporibus hic id.
+                        </p>
+                    </li>
+                    <li>
+                        <img src="img/знак.png" alt="знак">
+                        <h4>Разработка</h4>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                            Distinctio porro ducimus maiores temporibus hic id.
+                        </p>
+                    </li>
+                </div>
+                <div>
+                    <li>
+                        <img src="img/ракета.png" alt="ракета">
+                        <h4>СЕО-оптимизация</h4>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                            Distinctio porro ducimus maiores temporibus hic id.
+                        </p>
+                    </li>
+                    <li>
+                        <img src="img/граммофон.png" alt="граммофон">
+                        <h4>Маркетинг</h4>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                            Distinctio porro ducimus maiores temporibus hic id.
+                        </p>
+                    </li>
+                </div>
             </ul>
         </div>
     </div>
+    </section>
 
+    <section class="section"  id="cases">
     <div class="cases">
         <h2>Кейсы</h2>
         <img src="img/линия.png" alt="Черта заголовка">
@@ -186,12 +194,106 @@ $(window).on('load', function () {
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias deleniti, 
             eos amet provident eum dolores. Consectetur, ipsa nobis!
         </p>
-        <img src="img/кейс_портфолио.png" alt="Фото кейса" class="cases_img">
-    </div>    
+    
+        <div id="carouselExampleCaptions" class="carousel slide first-carousel" data-bs-ride="carousel"> <!--добавлен класс first-carousel-->
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner"> 
+              <div class="carousel-item active">
+                <img src="img/portfolio-2.jpg" href="img/portfolio-2.jpg" class="image-popup d-block w-100" alt="Work1">
+                <div class="carousel-caption d-none d-md-block carousel-info"> <!--добавлен класс carousel-info-->
+                  <!--добавление своиз абзацев-->
+                    <div class="cases-info">    
+                        <div class="example">
+                            <h3>Client</h3>
+                            <p>Какая-то компания</p>
+                            <h3>Website</h3>
+                            <p>http://www.domain.com</p>
+                            <input type="button" value="Visit Live Site">
+                        </div>
+                        <div class="projectname">
+                            <h3>Одностраничный сайт</h3>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim earum officia
+                                quis quasi repellendus praesentium accusantium voluptas quos harum deserunt numquam,
+                                reiciendis fugit eos ipsum eum excepturi fugiat deleniti quas hic facilis? 
+                                Ab fugit quidem, esse inventore consequuntur possimus quaerat.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="img/portfolio-1.jpg" href="img/portfolio-1.jpg" class="image-popup d-block w-100" alt="Work2">
+                <div class="carousel-caption d-none d-md-block carousel-info"> <!--добавлен класс carousel-info-->
+                  <div class="cases-info">    
+                        <div class="example">
+                            <h3>Client</h3>
+                            <p>Какая-то компания</p>
+                            <h3>Website</h3>
+                            <p>http://www.somedomain.com</p>
+                            <input type="button" value="Visit Live Site">
+                        </div>
+                        <div class="projectname">
+                            <h3>Интернет-магазин</h3>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim earum officia
+                                quis quasi repellendus praesentium accusantium voluptas quos harum deserunt numquam,
+                                reiciendis fugit eos ipsum eum excepturi fugiat deleniti quas hic facilis? 
+                                Ab fugit quidem, esse inventore consequuntur possimus quaerat.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="img/portfolio-3.jpg" href="img/portfolio-3.jpg" class="image-popup d-block w-100" alt="Work3">
+                <div class="carousel-caption d-none d-md-block carousel-info"> <!--добавлен класс carousel-info-->
+                  <!--добавление своиз абзацев-->
+                  <div class="cases-info">    
+                    <div class="example">
+                        <h3>Client</h3>
+                        <p>Какая-то компания</p>
+                        <h3>Website</h3>
+                        <p>http://www.somedomain.com</p>
+                        <input type="button" value="Visit Live Site">
+                    </div>
+                    <div class="projectname">
+                        <h3>Сайт-визитка</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim earum officia
+                            quis quasi repellendus praesentium accusantium voluptas quos harum deserunt numquam,
+                            reiciendis fugit eos ipsum eum excepturi fugiat deleniti quas hic facilis? 
+                            Ab fugit quidem, esse inventore consequuntur possimus quaerat.
+                        </p>
+                    </div>
+                </div>
+                </div>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"  data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Предыдущий</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"  data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Следующий</span>
+            </button>
+          </div>
+
+    </div> <!--Слайдер-->
+    <div class="cases-info mobile-cases-info">    
         <div class="example">
-            <h3>Client</h3>
-            <p>Какая-то компания</p>
-            <h3>Website</h3>
+            <h3>Website1</h3>
+            <p>http://www.somedomain.com</p>
+            <input type="button" value="Visit Live Site">
+            <h3>Website2</h3>
+            <p>http://www.somedomain.com</p>
+            <input type="button" value="Visit Live Site">
+            <h3>Website3</h3>
             <p>http://www.somedomain.com</p>
             <input type="button" value="Visit Live Site">
         </div>
@@ -203,12 +305,15 @@ $(window).on('load', function () {
                 reiciendis fugit eos ipsum eum excepturi fugiat deleniti quas hic facilis? 
                 Ab fugit quidem, esse inventore consequuntur possimus quaerat.
             </p>
+        </div>
     </div>
+    </section>
 
+    <section class="section"  id="price">
     <div class="price">
     <h2>Расчёт Стоимости</h2>
         <h3>Тип Сайта</h3>
-        <select name="type[]">
+        <select name="type[]" class="type">
             <option disabled selected value="Выберите пункт">Выберите пункт...</option>
             <option value="Визитка">Визитка</option>
             <option value="Корпоративный">Корпоративный сайт</option>
@@ -217,7 +322,7 @@ $(window).on('load', function () {
             <option value="Интернет-витрина">Интернет-витрина</option>
         </select>
         <h3>Дизайн</h3>
-        <select name="design[]">
+        <select name="design[]" class="design">
             <option disabled selected value="Выберите пункт">Выберите пункт...</option>
             <option value="Жёсткий">Жёсткий</option>
             <option value="Гибкий">Гибкий</option>
@@ -237,68 +342,120 @@ $(window).on('load', function () {
             <p>Сроки <span>0</span></p>
             <p>Стоимость <span>0</span></p>
         </div>
-    </div>
+    </div> <!--подключить js калькулятор-->
+    </section>
 
+    <section class="section"  id="statistics">
     <div class="statistics">
         <h2>Немного статистики</h2>
         <img src="img/линия.png" alt="Черта заголовка">
-        <div class="achievements animate__animated animate__heartBeat">
+        <div class="achievements"> <!--animate__animated animate__heartBeat">-->
             <ul>
-                <li>
-                    <img src="img/смайл.png" alt="смайл">
-                    <h3>120</h3>
-                    <h4>Счастливых клиентов</h4>
-                </li>
-                <li>
-                    <img src="img/скобки.png" alt="скобки">
-                    <h3>4,600</h3>
-                    <h4>Часов работы</h4>
-                </li>
-                <li>
-                    <img src="img/галочка.png" alt="галочка">
-                    <h3>340</h3>
-                    <h4>Проектов завершено</h4>
-                </li>
-                <li>
-                    <img src="img/кубок.png" alt="кубок">
-                    <h3>23</h3>
-                    <h4>Наград получено</h4>
-                </li>
+                <div>
+                    <li>
+                        <img src="img/смайл.png" alt="смайл">
+                        <h3>120</h3>
+                        <h4>Счастливых клиентов</h4>
+                    </li>
+                    <li>
+                        <img src="img/скобки.png" alt="скобки">
+                        <h3>4,600</h3>
+                        <h4>Часов работы</h4>
+                    </li>
+                </div>
+                <div>
+                    <li>
+                        <img src="img/галочка.png" alt="галочка">
+                        <h3>340</h3>
+                        <h4>Проектов завершено</h4>
+                    </li>
+                    <li>
+                        <img src="img/кубок.png" alt="кубок">
+                        <h3>23</h3>
+                        <h4>Награды получено</h4>
+                    </li>
+                </div>
             </ul>
         </div>
     </div>
+    </section>
 
+    <section class="section"  id="feedback">
     <div class="feedback">
         <h2>Отзывы</h2>
         <img src="img/линия.png" alt="Черта заголовка">
-        <p>
-            <img src="img/фотка_отзыва.png" alt="Отзыв">
-        </p>
-        <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Alias debitis, 
-            beatae neque modi laborum aperiam harum nesciunt ab voluptate, 
-            eaque consequuntur similique officiis suscipit laudantium!
-        </p>
-        <p>
-            Михаил,Ген директор ПАО "Газпром"
-        </p>
-        <div class="fb-list">
-            <ul>
-                <li>
-                    <img src="img/круг_оранж.png" alt="Оранжевый">
-                </li>
-                <li>
-                    <img src="img/круг_серый.png" alt="Серый">
-                </li>
-                <li>
-                    <img src="img/круг_серый.png" alt="Серый">
-                </li>
-            </ul>
+
+        <div class="sl-container">
+            <div class="swipe">
+                <div class="panel">
+                    <div class="panel-info">
+                        <p>
+                            <img src="img/фотка_отзыва.png" alt="Отзыв">
+                        </p>
+                        <p>
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Alias debitis, 
+                            beatae neque modi laborum aperiam harum nesciunt ab voluptate, 
+                            eaque consequuntur similique officiis suscipit laudantium!
+                        </p>
+                        <p>
+                            Михаил,Ген директор ПАО "Газпром"
+                        </p>
+                    </div>
+            <img src="img/bg-slider.JPG">
+        </div>
+        <div class="panel">
+            <div class="panel-info">
+                <p>
+                    <img src="img/фотка_отзыва.png" alt="Отзыв">
+                </p>
+                <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Alias debitis, 
+                    beatae neque modi laborum aperiam harum nesciunt ab voluptate, 
+                    eaque consequuntur similique officiis suscipit laudantium!
+                </p>
+                <p>
+                    Михаил,Ген директор ПАО "Газпром"
+                </p>
+            </div>
+            <img src="img/bg-slider2.jpg">
+        </div>
+        <div class="panel">
+            <div class="panel-info">
+                <p>
+                    <img src="img/фотка_отзыва.png" alt="Отзыв">
+                </p>
+                <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Alias debitis, 
+                    beatae neque modi laborum aperiam harum nesciunt ab voluptate, 
+                    eaque consequuntur similique officiis suscipit laudantium!
+                </p>
+                <p>
+                    Михаил,Ген директор ПАО "Газпром"
+                </p>
+            </div>
+            <img src="img/bg-slider3.jpg">
         </div>
     </div>
+    <div class="sl-info">
+        <div class="inner">
+            <h3>Честные отзывы</h3>
+            <p>Настоятельно рекомендуем ознакомиться (листайте вправо)</p>
+        </div>
+        <div class="sl-buttons">
+            <button class="btn-prev" disabled>
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+            </button>
+            <button class="btn-next">
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>      
+            </button>
+         </div>
+       </div>
+      </div>
+    </div>
+    </section>
 
-    <footer>
-        <div class="contacts">
+    <section class="section"  id="contacts">
+       <div class="contacts">
                 <h2>Мои контакты</h2>
                 <img src="img/линия.png" alt="Черта заголовка">
                 <p>
@@ -306,40 +463,38 @@ $(window).on('load', function () {
                     Eos quibusdam facere eum expedita maxime omnis?
                 </p>
                 <div class="con1">
-                    <ul>
-                        <li>
-                            <img src="img/гео.png" alt="гео">
-                            <p>
-                                Москва <br>Софийская набережная 31
-                            </p>
-                        </li>
-                        <li>
-                            <img src="img/конверт.png" alt="конверт">
-                            <p>
-                                info@companyname.com
-                            </p>
-                        </li>
-                        <li>
-                            <img src="img/труба.png" alt="труба">
-                            <p>
-                                +7 (800) 555-35-55
-                            </p>
-                        </li>
-                    </ul>
+                    <div>
+                        <img src="img/гео.png" alt="гео">
+                        <p>
+                            Москва, Софийская 31
+                        </p>
+                    </div>
+                    <div>
+                        <img src="img/конверт.png" alt="конверт">
+                        <p>
+                            info@companyname.com
+                        </p>
+                    </div>
+                    <div>
+                        <img src="img/труба.png" alt="труба">
+                        <p>
+                            +7 (800) 555-35-55
+                        </p>
+                    </div>
                 </div>
             <div class="message">
                 <h3>Оставьте мне сообщение</h3>
                 <form action="#">
-                    <p>
-                        <input type="text" name="yourname" class="yourname" value="" placeholder="Имя">
-                        <input type="text" name="yourmail" class="yourmail" value="" placeholder="Email">
-                    </p>
-                    <p>
+                    <div class="message-input">
+                        <div><input type="text" name="yourname" class="yourname" value="" placeholder="Имя"></div>
+                        <div><input type="text" name="yourmail" class="yourmail" value="" placeholder="Email"></div>
+                    </div>
+                    <div>
                         <textarea name="yourtext" class="yourtext" value="" placeholder="Сообщение"></textarea>
-                    </p>
-                    <p>
-                        <input type="button" class="btn" value="Отправить"><!--submit-->
-                    </p>
+                    </div>
+                    <div>
+                        <input type="button" class="last-button" value="Отправить"><!--submit-->
+                    </div>
                 </form>
             </div>     
             <div class="social_media">
@@ -364,7 +519,10 @@ $(window).on('load', function () {
                     </li>
                 </ul>
             </div>
-        </div>
+       </div>
+    </section>
+
+    <footer>
         <div class="geo">
                 <!--
                     Место для карты
@@ -372,10 +530,14 @@ $(window).on('load', function () {
                 -->
         </div>
             <div class="copyright">
-                Copyright © 2021 Александр Лобанов. Design by Web.
+                <div>Copyright © 2022 Александр Лобанов.</div>
+                <div>Design by Web.</div>
             </div>
     </footer>
-<script src="js/bootstrap.bundle.min.js"></script>
-<script src="js/jsMain.js"></script>
+    <script src="js/jquery-3.6.0.min.js.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script> <!--всплывающие окна-->
+    <script src="js/jqueryMain.js"></script>
+<!--<script src="js/jsMain.js"></script>-->
 </body>
 </html>

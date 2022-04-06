@@ -7,8 +7,10 @@
 	font-weight: normal;
 	font-style: normal;
 }
-
-/*предлоадер*/
+section{
+    padding-top: 1px;
+}
+/*предлоадер*/ /* временно на хуй
 
 .preloader {
     position: fixed;
@@ -16,12 +18,12 @@
     top: 0px;
     width: 100%;
     height: 100%;
-    z-index: 999999;/*влияет на плавность*/
+    z-index: 999999;/*влияет на плавность*//*
     display: flex;
     align-items: center;
     justify-content: center;  
     background: #fff;
-    transition: all 2s;
+    transition: all 3s;
     opacity: 1;
 }
 .preloader-remove {
@@ -65,7 +67,7 @@ nav{
     /*background: #42546e;/*#1c2534; фон кнопки!!!*/
     color: #e88604;
 }
-@keyframes comming{
+@keyframes comming{ 
     from{
         opacity: 0;
     }
@@ -128,11 +130,11 @@ main{
 @keyframes topshift{
     from{
         opacity: 0;
-        margin-top: -80px;
+        margin-bottom: -80px;
     }
     to{
         opacity: 1;
-        margin-top: 0px;
+        margin-bottom: 0px;
     }
 }
 .white-btn:visited{
@@ -162,7 +164,7 @@ main{
     -o-animation-delay: 3s;
     animation-delay: 3s;
     opacity: 0;
-}*/
+}
 @keyframes photomove{
     from{
         opacity: 0;
@@ -172,7 +174,7 @@ main{
         opacity: 1;
         margin-right: 1px;
     }
-}
+}*/
 .title__container{
     float: left;
    /* margin: 232px 0 0 232px; /*432px 0px 0px 404px;*/
@@ -233,8 +235,16 @@ main{
 .custom-css3{
     font-size: 25px;
 }
-@media (max-width: 991px) {
-    .title__container, .title__container h4, .title__container input{
+@media (max-width: 768px){
+    .logo{
+        -webkit-animation: comming 0s ease; /*дребезжание хедера*/
+        -o-animation: comming 0s ease;
+        animation: comming 0s ease;
+        padding-left: 15%;
+    }
+    .title__container, 
+    .title__container h4, 
+    .title__container input{
         color: white;
         position: relative;
         z-index: 3;
@@ -242,6 +252,19 @@ main{
     .title__container input{
         border: 2px solid #fff;
     }
+    .title__container{
+        -webkit-animation: titlemove 0s ease forwards;/*появление имя/фамилии*/
+        -o-animation: titlemove 0s ease forwards;
+        animation: titlemove 0s ease forwards;
+        -webkit-animation-delay: 0s;
+        -o-animation-delay: 0s;
+        animation-delay: 0s;
+    }
+    /*.menu li{
+        -webkit-animation: topshift 0s ease forwards;
+        -o-animation: topshift 0s ease forwards;
+        animation: topshift 0s ease forwards;
+    }*/
     .main{
         position: relative;
     }
@@ -252,8 +275,24 @@ main{
         left: 0;
         right: 0;
         position: absolute;
-        background: rgba(0, 0, 0, 0,4);
+        background: rgba(0, 0, 0, 0.4);
         z-index: 1;
+    }
+    .btn{
+        margin-left: 5%;
+    }
+}
+@media (max-width: 425px){
+    .logo{
+        padding-left: 5%;
+    }
+}
+@media (max-width: 375px){
+    .logo{
+        font-size: 20px;
+    }
+    .btn{
+        margin-left: 3%;
     }
 }
 /*ОКНО 2 Обо мне..................................................................................*/
@@ -262,18 +301,18 @@ main{
     text-align: center;
 }
 .aboutme h2{
-    margin: 108px 0 33px 0;
+    margin: 8% 0 2.5%;
     font-size: 33px;
     text-transform: uppercase;
     color: #263244;
 }
 .aboutme .img1{
-    margin: 94px 0 24px 0;
+    margin: 2% 0 2%;
 }
 .aboutmeinfo p{
     margin: auto; /*центр*/
     padding-bottom: 34px;
-    width: 732px;
+    width: 50%;
     font-size: 17px;
     text-align: left;
     color: #3f495a;
@@ -295,32 +334,54 @@ main{
 .aboutme button:active{
     transform: scale(1.1);
 }
+@media (max-width: 768px){
+    .aboutme h2{
+        margin: 8% 0 16px;
+        font-size: 23px;
+    }
+    .aboutmeinfo p{
+        width: 70%;
+    }
+}
+@media (max-width: 425px){
+    .img1{
+        width: 40%;
+        height: 40%;
+    }
+}
 
 /*ОКНО 3 Что я умею.............................................................................*/
 
 .cando{
     text-align: center;
-    height: 520px; /*520px*/
+    height: 550px; /*520px*/
     background: url(../img/bg-2cando.jpg)
-    center/100% 520px no-repeat;
+    center/100% 550px no-repeat;
 }
 .cando h2{
     margin: 97px 0 33px 0;
-    padding-top: 107px;
+    padding-top: 95px;
     font-size: 33px;
     text-transform: uppercase;
     color: #263244;
 }
-.skills{
-    /*float: left;*/
-    margin-left: 15%; /*416px;*/
-    margin-top: 100px;
+.skills ul{
+    display: flex;
+    justify-content: center;
+    /*margin-left: 15%; /*416px;*/
+    margin-top: 90px;
+}
+.skills ul div{
+    display: flex;
 }
 .skills li{
-    float: left;
     text-align: center;
     width: 200px;
     margin-right: 5%;/*82px;*/
+}
+.skills li img{
+    width: 50px;
+    height: 50px;
 }
 .skills li img:hover{
     animation: rubberBand;
@@ -334,6 +395,42 @@ main{
 .skills p{
     font-size: 16px;
     color: #3f495a;
+}
+@media (max-width: 768px){
+    .cando{
+        height: 640px; 
+        background: url(../img/bg-2cando.jpg)
+        center/100% 640px no-repeat;
+    }
+    .cando h2{
+        margin: 65px 0 16px;
+        padding-top: 35px;
+        font-size: 23px;
+    }
+    .skills ul{
+        margin-top: 50px;
+        padding-left: 0;
+    }
+    .skills ul div{
+        flex-direction: column; /*ранее задан флекс,*/
+    }
+}
+@media (max-width: 425px){ 
+    .cando{
+        height: 1130px; 
+        background: url(../img/bg-2cando-mobile.jpg)
+        center/100% repeat-y;
+    }
+    .skills ul{
+        display: block;
+        justify-content: center;
+        align-items: center;
+        padding-left: 4.5%;
+    }
+    .skills ul div { 
+        justify-content: center;
+        align-items: center;
+    }
 }
 
 /*ОКНО 4 Кейсы...................................................................................*/
@@ -355,10 +452,38 @@ main{
     width: 70%;
     height: auto;
 }
+.first-carousel{
+    width: 70%;
+    margin: 0 15%;
+    height: auto;
+}
+.carousel-info{
+    position: relative;
+    color: black;
+    left: 0%;
+}
+.carousel-indicators{
+    margin-bottom: 22rem;
+}
+.cases-info{
+    display: flex;
+}
+.carousel-control-prev,
+.carousel-control-next{
+    bottom: 35%;
+}
+.carousel-control-next-icon, 
+.carousel-control-prev-icon{
+    box-shadow: 0 0 18px rgb(0 0 0);
+    background-color: #1c2534;
+}
+.mobile-cases-info{
+    display: none;
+}
 .example{
-    margin: 35px 15% 0;
-    width: 15%; /*287px*/ /*блоки по порядку: первый */
-    float: left; /*блоки по порядку: второй*/
+    margin: 15px 30px 0 10px;
+    width: 33%; /*287px*/
+    text-align: left;
 }
 .example h3{
     font-size: 25px;
@@ -369,7 +494,7 @@ main{
 .example p{
     font-size: 16px;
     color: #3f495a;
-    margin: 17px 0;
+    margin: 17px;
 }
 .example input{
     color:#fff;
@@ -379,8 +504,9 @@ main{
     background: #63b5ae;
     border-radius: 4px;
     height: 44px;
-    padding: 0 43px;
+    padding: 0 10%;
     transform: scale(1);
+    margin-bottom: 20px;
 }
 .example input:hover{
     background: #fff;
@@ -391,8 +517,8 @@ main{
     transform: scale(1.1);
 }
 .projectname{
-    margin: 35px 15% 0 0;
-    height: 195px;
+    margin-top: 15px;
+    text-align: left;
 }
 .projectname h3{
     font-size: 25px;
@@ -404,16 +530,79 @@ main{
     color: #3f495a;
     line-height: 25px;
 }
-
+@media (max-width: 768px) {
+    .carousel-control-prev,
+    .carousel-control-next{
+        bottom: 50%;
+    }
+    .cases h2{
+        margin: 90px 0 13px;
+        font-size: 23px;
+    }
+    .cases>p{
+        margin: 5px 15%;
+    }
+    .cases_img{
+        width: 70%;
+    }
+    .projectname p{
+        font-size: 16px;
+    }
+    .example p{
+        margin-left: 0;
+    }
+    
+}
+@media (max-width: 425px) {
+    .carousel-control-prev,
+    .carousel-control-next{
+        bottom: 0;
+    }
+    .cases-info{
+        position: relative;
+        width: 80%;
+        margin: 0 10%;
+    }
+    .cases-info div{
+       flex-direction: column;
+    }
+    .mobile-cases-info{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .first-carousel{
+        width: 80%;
+        margin: 0 10%;
+    }
+    .carousel-indicators{
+        margin-bottom: 0rem;
+    }
+    .mobile-cases-info h3{
+        font-size: 21px;
+    }
+    .example h3 {
+        margin-bottom: 0;
+    }
+    .example p{
+        margin: 0;
+    }
+    .example input {
+        font-size: 15px;
+        height: 33px;
+    }
+    .projectname p {
+        font-size: 14px;
+    }
+}
 /*ОКНО 5 Расчёт стоимости........................................................................*/
 
 .price{
-    margin: auto 25%;
+    margin-left: 25%;
     width: 50%;
 }
 .price h2{
-    margin-top: 210px;
-    font-size: 45px;
+    margin-top: 50px;
+    font-size: 40px;
     color: #1c2534;
     text-align: center;
 }
@@ -423,11 +612,17 @@ main{
     color: #1c2534;
     text-transform: uppercase;
 }
+.price .type{
+    padding-right: 201px;
+}
+.price .design{
+    padding-right: 216px;
+}
 .price select{
     font-size: 16px;
     color: #737373;
-    margin: auto 20px 0 31px;
-    padding-right: calc(50% - 20px);
+    margin-left: 30px;
+    padding-right: 125px;
 }
 .price-calc{
     margin-top: 58px;
@@ -442,14 +637,39 @@ main{
 .price-calc span{
     float: right;
 }
+@media (max-width: 768px){
+    .price h2{
+        font-size: 27px;
+    }
+}
+@media (max-width: 425px){
+    .price{
+        margin-left: 15%;
+        width: 70%;
+    }
+    .price h3{
+        font-size: 17px;
+        margin: 50px auto 23px;
+    }
+    .price select{
+        margin-left: -25px;
+        padding-right: 5px;
+    }
+    .price .type{
+        padding-right: 81px;
+    }
+    .price .design{
+        padding-right: 96px;
+    }
+}
 
 /*ОКНО 6 Немного статистики......................................................................*/
 
 .statistics{
     text-align: center;
-    height: 500px;
+    height: 530px;
     background: url(../img/bg-3statistics.jpg)
-    center/100% 500px no-repeat;
+    center/120% 530px no-repeat; /*для адаптации на мобиле увеличить %*/
     margin-top: 155px;
     background-attachment: fixed;
 }
@@ -459,21 +679,27 @@ main{
     text-transform: uppercase;
     color: #263244;
 }
-.achievements{
-    /*float: left;*/
-    margin-left: 15%; /*416px;*/
+.achievements ul{
+    /*margin-left: 15%; /*416px;*/
+    display: flex;
+    justify-content: center;
     margin-top: 90px;
 }
+.achievements ul div{
+    display: flex;
+}
 .achievements li{
-    float: left;
     text-align: center;
     width: 208px;
-    margin-right: 4%;/*82px;*/
+    margin-right: 3% 6% 0 0;/*82px;*/
+}
+.achievements li img{
+    width: 55px;
+    height: 55px;
 }
 .achievements li img:hover{
     animation: heartBeat;
     animation-duration: 2s;
-
 }
 .achievements h3{
     margin: 33px auto 30px;
@@ -485,6 +711,47 @@ main{
     color: #323d4f;
     text-transform: uppercase;
     font-weight: bold;
+}
+@media (max-width: 768px){
+    .statistics{
+        height: 515px;
+        background: url(../img/bg-3statistics.jpg)
+        center/190% 515px no-repeat;
+    }
+    .achievements ul{
+        margin-top: 50px;
+        padding-left: 0;
+    }
+    .achievements ul div{
+        flex-direction: column; /*ранее задан флекс,*/
+    }
+    .statistics h2{
+        padding: 65px 0 16px 0;
+        font-size: 23px;
+    }
+    .achievements h3{
+        margin: 23px auto 20px;
+        font-size: 27px;
+    }
+    .achievements h4{
+        font-size: 15px;
+    }
+}
+@media (max-width: 425px){ 
+    .statistics{
+        height: 815px;
+        background: url(../img/bg-3statistics.jpg)
+        center/310% 850px no-repeat;
+    }
+    .achievements ul{
+        display: block;
+        justify-content: center;
+        align-items: center;
+    }
+    .achievements ul div{ 
+        justify-content: center;
+        align-items: center;
+    }
 }
 
 /*ОКНО 7 Отзывы..................................................................................*/
@@ -503,7 +770,7 @@ main{
 }
 .feedback p{
     margin: 0 auto 38px;
-    width: 690px;
+    width: 36%;
 }
 .fb-list{
     margin: 0 47%;
@@ -512,6 +779,153 @@ main{
     float: left;
     margin-left: 14px;
 }
+/*слайдер*/
+.sl-container{
+    width: 80%;
+    height: 500px;
+    margin: 20px 10%;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1em;
+    line-height: 1.5em;
+    color: #000;
+    position: relative;
+}
+.swipe{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: #eee;
+    overflow: hidden;
+}
+.panel{
+    position: absolute;
+    width: 100%;
+    min-height: 100%;
+    top: 0;
+    left: 0;
+    padding: 20px;
+}
+.panel-info{
+    position: absolute; 
+    top: 7%;
+    right: 33%;
+}
+.left{
+    left: -100%;
+}
+.right{
+    left: 100%;
+}
+.sl-info{
+    position: absolute;
+    width: 70%;
+    max-width: 30%;
+    bottom: 15%;
+    right: 5%;
+    pointer-events: none;
+}
+.inner{
+    position: relative;
+    padding: 0.5em 2em 1em;
+    background: #FFFFFF;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+.inner h3{
+    font-size: 1.7em;
+    font-weight: normal;
+    color: #344051;
+}
+.inner p{
+    font-family: Verdana, sans-serif;
+}
+.sl-info:before{
+    content: "";
+    position: absolute;
+    width: 65%;
+    height: 80%;
+    top: 0;
+    left: 0;
+    transform: translate(-10px, -10px);
+    background: #344051;
+}
+.sl-buttons{
+    position: absolute;
+    bottom: -50px;
+    right: 5%;
+    pointer-events: all;
+}
+.sl-buttons button{
+    transition: ease .4s;
+}
+.sl-buttons button svg{
+    margin: 10px 0;
+}
+.sl-buttons .btn-prev,
+.sl-buttons .btn-next{
+    width: 60px;
+    height: 60px;
+    margin-left: 10px;
+    border: 2px solid #344051;
+    outline: none;
+    border-radius: 60px;
+    color: #FFFFFF;
+    background: #344051;
+    box-shadow: 0px 3px 15px 2px rgba(0,0,0,.5);
+    cursor: pointer;
+}
+.sl-buttons button:hover{
+    box-shadow: 0px 3px 30px 3px rgba(0,0,0,.5);
+}
+.sl-buttons button:disabled{
+    box-shadow: 0px 1px 5px 0px rgba(0,0,0,.5);
+    background: #BFE2FF;
+    cursor: default;
+}
+.optional{
+    width: 80%;
+    max-width: 680px;
+    margin: 6em auto;
+    padding: 2em 3em;
+    box-shadow: 
+    0 3px 12px rgba(0,0,0,0.16), 
+    0 3px 12px rgba(0,0,0,0.23);
+}
+@media (max-width: 768px){
+    .feedback h2{
+        margin: 90px 0 5px 0;
+        font-size: 23px;
+    }
+}
+@media (max-width: 425px){
+    .feedback {
+        padding-bottom: 90px;
+    }
+    .feedback p{
+        margin: 0 auto 38px;
+        width: 70%;
+    }
+    .panel-info{
+        position: absolute;
+        top: 3%;
+        right: -6%;
+    }
+    .sl-info{
+        position: absolute;
+        width: 91%;
+        max-width: 94%;
+        bottom: -120px;
+        right: 0;
+    }
+    .inner{
+        padding: .5em 1.5em;
+        box-shadow: none;
+    }
+    .sl-buttons{
+        bottom: -25px;
+        right: 28%;
+    }
+}
 
 /*ОКНО 8 Мои контакты............................................................................*/
 
@@ -519,47 +933,49 @@ main{
     text-align: center;
     height: 808px;
     background: url(../img/bg-4contacts.jpg)
-    center/auto 808px no-repeat;
+    center/100% 808px no-repeat; /*вместо auto поставить 100%*/
     margin-top: 91px;
     color: #fff;
 }
 .contacts h2{
-    padding: 107px 0 33px 0;
+    padding: 85px 0 10px 0;
     font-size: 33px;
     text-transform: uppercase;
 }
 .contacts>p{
-    margin: 35px auto 47px;
+    margin: 35px auto 43px;
     font-size: 16px;
 }
 .con1{
-    margin-left: 22%;/*655px*/
+    /*width: 60%;
+    margin: 0 20%;*/
+    justify-content: center;
+    display: flex;
 }
-.con1 li{
-    float: left;
+.con1 div{
     text-align: center;
     width: 187px;
     height: 71px;
-    margin-right: 9%;
     font-size: 16px;
+}
+.con1 div:not(:last-child){
+    margin-right: 18%;
 }
 .con1 p{
     margin-top: 16px;
-}/*
-.Измерить всё с этого моммента
-}*/
+}
 .message h3{
-    margin: 165px 0 47px;
-    text-align: center;
+    margin: 70px 0 47px;
+    justify-content: center;
     font-size: 20px;
     text-transform: uppercase;
 }
-.message p{
-    float: left;
-    margin: auto 30%;
+.message-input{
+    display: flex;
+    justify-content: center;
 }
-.yourname, .yourmail{
-    width: 252px;/*330px*/
+.yourname, .yourmail{ 
+    width: 330px;
     height: 30px;
     padding-left: 10px;
 }
@@ -567,13 +983,14 @@ main{
     margin-right: 29px;
 }
 .yourtext{
-    margin-top: 20px;
+    display: flex;       /*display: flex + margin: 0 auto; - выравнивание*/
+    margin: 20px auto;
     height: 100px;
-    width: 537px;
+    width: 689px;
     padding: 5px 0 0 10px;
 }
-.btn{
-    margin: 20px 0 0 225px;
+.last-button{
+    margin-top: 3px;
     background: none;
     color: #fff;
     border: 2px solid #fff;
@@ -583,21 +1000,72 @@ main{
     transform: scale(1);
     transition: all 0.3s;
 }
-.btn:hover{
+.last-button:hover{
     color: #343f50;
     background: #fff;
     border: 2px solid #343f50;
 }
-.btn:active{
+.last-button:active{
     transform: scale(1.1);
 }
-.social_media{
-    margin-top: 290px;
-    margin-left: 34.6%;
+.social_media ul{
+    display: flex;
+    margin: 30px auto;
+    justify-content: center;
 }
-.social_media li{
-    float: left;
+.social_media li:not(:last-child){
     margin-right: 55px;
+}
+@media (max-width: 768px){
+    .contacts h2 {
+        padding: 66px 0 3px 0;
+        font-size: 23px;
+    }
+    .message h3 {
+        margin: 50px 0 25px;
+    }
+    .contacts>p {
+        margin: 35px auto 24px;
+    }
+    .message-input{
+        flex-direction: column;
+    }
+    .yourname{
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+    .yourtext{
+        width: 330px;
+    }
+    .social_media ul {
+        padding-left: 0;
+    }
+}
+@media (max-width: 425px){
+    .con1{
+        flex-direction: column;
+        align-items: center;
+    }
+    .con1 div:not(:last-child){
+        margin-right: 0;
+    }
+    .contacts{
+        height: 890px;
+        background: url(../img/bg-4contacts.jpg) 
+        center/180% 890px no-repeat;
+        margin-top: 91px;
+    }
+    .message h3 {
+        margin: 35px 0 25px
+    }
+    .yourname, 
+    .yourmail, 
+    .yourtext{ 
+        width: 270px;
+    }
+    .social_media li:not(:last-child) {
+        margin-right: 15px
+    }
 }
 
 /*ОКНО 9 Карта.................................................................................*/
@@ -608,10 +1076,18 @@ main{
     height: 356px;
 }
 .copyright{
+    display: flex;
+    justify-content: center;
     background: #354051;
     height: 95px;
     line-height: 95px;
-    text-align: center;
     color: #fff;
     font-size: 13px;
+}
+@media (max-width: 425px){
+    .copyright{
+        flex-direction: column;
+        align-items: center;
+        line-height: 20px;
+    }
 }
