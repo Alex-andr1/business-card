@@ -7,10 +7,8 @@
 	font-weight: normal;
 	font-style: normal;
 }
-section{
-    padding-top: 1px;
-}
-/*предлоадер*/ /* временно на хуй
+/*предлоадер.............................................................................................................................*/
+/* временно на хуй
 
 .preloader {
     position: fixed;
@@ -39,10 +37,113 @@ section{
 @keyframes preloader-spin {
     from { transform: rotate(0deg) }
     to { transform: rotate(360deg) }
+}*/
+
+/*Всплывающее окно...........................................................................................................................*/
+#bg_popup{
+    background-color: rgba(0, 0, 0, 0.8);
+    display: none;
+    position: fixed;
+    z-index: 99999;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
 }
-/*Начало страницы*/
+#popup{
+    width: 60%;
+    height: auto;
+    margin: 10% auto;
+    background: url(../img/bg-0popup.jpg)
+    center/100% 445px no-repeat;
+    padding: 5px 20px 13px 20px;
+    border: 2px solid #344051;
+    position: relative;
+    border-radius: 15px;
+    justify-content: center;
+    display: flex;
+}
+.popup-close{
+    display:block;
+    position:absolute;
+    top:-12px;
+    right:5px;
+    width:57px;
+    height:25px;
+    line-height:25px;
+    background: #f30;
+    cursor:pointer;
+    text-decoration:none;
+    border-radius: 6px;
+}
+.popup-close:hover{
+    color: #fff;
+    background-color:#e88604;
+}
+.popup-message{
+    text-align: center;
+    color: #fff;
+}
+.popup-inputs input,
+.popup-message textarea{
+    width: 40%;
+    height: 30px;
+    padding-left: 10px;
+    margin-top: 20px;
+}
+.popup-message textarea{
+    margin-bottom: 15px;
+    height: 45px;
+}
+.popup-button{
+    margin-top: 3px;
+    background: none;
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 16px;
+    transform: scale(1);
+    transition: all 0.3s;
+}
+.popup-button:hover{
+    color: #343f50;
+    background: #fff;
+    border: 2px solid #343f50;
+}
+.popup-button:active{
+    transform: scale(1.1);
+}
+@media (max-width: 425px){
+    #popup{
+        width: 80%;
+        margin: 20% auto;
+        background: url(../img/bg-0popup.jpg)
+        center/160% 355px no-repeat;
+        padding: 10px;
+    }
+    .popup-inputs input,
+    .popup-message textarea{
+        width: 66%;
+        height: 20px;
+        padding-left: 5px;
+        margin-top: 15px;
+    }
+    .popup-message textarea{
+        height: 30px;
+    }
+    .popup-button{
+        margin-top: 0;
+        border-radius: 3px;
+        padding: 5px;
+    }
+}
+/*Начало страницы...........................................................................................................................*/
 body{
     font-family: Arial, sans-serif;
+}
+section{
+    padding-top: 1px;
 }
 nav{
     width: 100%;
@@ -383,7 +484,7 @@ main{
     width: 50px;
     height: 50px;
 }
-.skills li img:hover{
+.skills li img:hover{ /*анимация при наведении*/
     animation: rubberBand;
     animation-duration: 2s;
 }
@@ -431,6 +532,16 @@ main{
         justify-content: center;
         align-items: center;
     }
+}
+/*отложенная анимация 1 / Itersection observer 1*/
+.box{
+    transition: transform 2s ease-in;
+}
+.box--spin.box--visible{
+    transform: rotate(720deg);
+}
+.box--grow.box--visible{
+    transform: scale(1.5);
 }
 
 /*ОКНО 4 Кейсы...................................................................................*/
@@ -597,8 +708,10 @@ main{
 /*ОКНО 5 Расчёт стоимости........................................................................*/
 
 .price{
-    margin-left: 25%;
-    width: 50%;
+    margin-left: 22%;
+    width: 56%;
+    padding: 0 2%;
+    background: url(../img/bg-6calc.jpg);
 }
 .price h2{
     margin-top: 50px;
@@ -621,7 +734,7 @@ main{
 .price select{
     font-size: 16px;
     color: #737373;
-    margin-left: 30px;
+    margin: 0 0 20px 30px;
     padding-right: 125px;
 }
 .price-calc{
@@ -636,6 +749,38 @@ main{
 }
 .price-calc span{
     float: right;
+}
+.approx{
+    font-size: 13px;
+    color: #4d4a4a;
+    padding-top: 8px;
+}
+.close{
+    margin-left: 10px;
+    color: #ff2104;
+    cursor: pointer;
+}
+.position{
+    width: fit-content;
+    background: #e6a52e;
+    padding: 5px 5px 8px 5px;
+    border-radius: 5px;
+    margin: 5px 5px 5px 5px;
+    color: #fff;
+    display: inline-block;
+}
+.position-day{
+    width: fit-content;
+    background: #2ee0e6;
+    padding: 5px 5px 8px 5px;
+    border-radius: 5px;
+    margin: 5px 5px 5px 5px;
+    color: #fff;
+    display: inline-block;
+}
+.box-select{
+    font-size: 16px;
+    color: #263244;
 }
 @media (max-width: 768px){
     .price h2{
@@ -712,6 +857,7 @@ main{
     text-transform: uppercase;
     font-weight: bold;
 }
+
 @media (max-width: 768px){
     .statistics{
         height: 515px;
@@ -753,7 +899,17 @@ main{
         align-items: center;
     }
 }
-
+/*отложенная анимация 2 / Itersection observer 2*/
+/*
+.box{
+    transition: transform 2s ease-in;
+}
+.box--spin.box--visible{
+    transform: rotate(720deg);
+}
+.box--grow.box--visible{
+    transform: scale(1.5);
+}*/
 /*ОКНО 7 Отзывы..................................................................................*/
 
 .feedback{

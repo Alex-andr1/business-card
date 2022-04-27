@@ -1,11 +1,15 @@
 "use strict"
 
-//pop up (модальные окна)
+//pop up (слайдер)
 $(document).ready(function() {
     $('.image-popup').magnificPopup({type:'image'});
 });
 
+//pop up (в начале)
+let delay_popup = 30000;
+setTimeout("document.getElementById('bg_popup').style.display='block'", delay_popup);
 
+/*
 //слайдер
 $(function(){
     var tolerance = 100;
@@ -94,3 +98,4 @@ $(function(){
         };
     };
 });
+*/
