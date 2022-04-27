@@ -19,7 +19,8 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-   <!-- <div class="preloader">
+    <!--preloader-->
+<!-- <div class="preloader">
         <div>
             <div>
                 <div>
@@ -46,6 +47,30 @@ $(window).on('load', function () {
     $('.preloader').addClass("preloader-remove");     
 });
     </script>-->
+
+    <!--popup-->
+    <div id="bg_popup">
+        <div id="popup">
+            <div class="popup-message">
+                <h3>Для новых пользователей гарантирована скидка!</h3>
+                <form action="#">
+                    <div class="popup-inputs">
+                        <div><input type="text" name="popup-name" class="popup-name" value="" placeholder="ФИО"></div>
+                        <div><input type="text" name="popup-phone" class="popup-phone" value="" placeholder="Телефон"></div>
+                        <div><input type="text" name="popup-mail" class="popup-mail" value="" placeholder="Email"></div>
+                    </div>
+                    <div>
+                        <textarea name="popup-text" class="popup-text" value="" placeholder="Сообщение"></textarea>
+                    </div>
+                    <div>
+                        <input type="button" class="popup-button" value="Отправить"><!--submit-->
+                    </div>
+                </form>
+            </div>     
+            <a class="popup-close" title="Закрыть" onclick="document.getElementById('bg_popup').style.display='none';">Закрыть</a>
+        </div>
+    </div>
+
     <header>
         <nav>
             <div class="container">
@@ -139,6 +164,7 @@ $(window).on('load', function () {
         </div>
     </section>
 
+    <!--js Intersection Observer 1 применён в секции-->
     <section class="section"  id="cando">
     <div class="cando">
         <h2>Что я умею</h2>
@@ -147,7 +173,7 @@ $(window).on('load', function () {
             <ul>
                 <div>
                     <li>
-                        <img src="img/ноут.png" alt="ноут">
+                        <img src="img/ноут.png" class="box box--spin" alt="ноут">
                         <h4>Веб-дизайн</h4>
                         <p>
                             Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
@@ -155,7 +181,7 @@ $(window).on('load', function () {
                         </p>
                     </li>
                     <li>
-                        <img src="img/знак.png" alt="знак">
+                        <img src="img/знак.png" class="box box--spin" alt="знак">
                         <h4>Разработка</h4>
                         <p>
                             Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
@@ -165,7 +191,7 @@ $(window).on('load', function () {
                 </div>
                 <div>
                     <li>
-                        <img src="img/ракета.png" alt="ракета">
+                        <img src="img/ракета.png" class="box box--spin" alt="ракета">
                         <h4>СЕО-оптимизация</h4>
                         <p>
                             Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
@@ -173,7 +199,7 @@ $(window).on('load', function () {
                         </p>
                     </li>
                     <li>
-                        <img src="img/граммофон.png" alt="граммофон">
+                        <img src="img/граммофон.png" class="box box--spin" alt="граммофон">
                         <h4>Маркетинг</h4>
                         <p>
                             Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
@@ -313,38 +339,147 @@ $(window).on('load', function () {
     <div class="price">
     <h2>Расчёт Стоимости</h2>
         <h3>Тип Сайта</h3>
-        <select name="type[]" class="type">
-            <option disabled selected value="Выберите пункт">Выберите пункт...</option>
-            <option value="Визитка">Визитка</option>
-            <option value="Корпоративный">Корпоративный сайт</option>
-            <option value="Лендинг">Лендинг</option>
-            <option value="Интернет-магазин">Интернет-магазин</option>
-            <option value="Интернет-витрина">Интернет-витрина</option>
-        </select>
-        <h3>Дизайн</h3>
-        <select name="design[]" class="design">
-            <option disabled selected value="Выберите пункт">Выберите пункт...</option>
-            <option value="Жёсткий">Жёсткий</option>
-            <option value="Гибкий">Гибкий</option>
-            <option value="Комбинированный">Комбинированный</option>
-            <option value="Интерфейсный">Интерфейсный</option>
-            <option value="Динамический">Динамический</option>
-            <option value="Полиграфический">Полиграфический</option>
-        </select>
-        <h3>Адаптивность</h3>
-        <select name="adapt[]">
-            <option disabled selected value="Выберите пункт">Выберите пункт...</option>
-            <option value="Адаптивная вёрстка">Адаптивная вёрстка</option>
-            <option value="Респонсив вёрстка">Респонсив вёрстка</option>
-            <option value="Отдельная мобильная вёрстка">Отдельная мобильная вёрстка</option>
-        </select>
-        <div class="price-calc">
-            <p>Сроки <span>0</span></p>
-            <p>Стоимость <span>0</span></p>
+        <div class="box-select">
+            <select name="type[]" class="type select">
+                <!--<option disabled selected value="Выберите пункт">Выберите пункт...</option>-->
+                <option data-price="5000" data-time="3" value="Визитка">Визитка</option>
+                <option data-price="10000" data-time="6" value="Лендинг">Лендинг</option>
+                <option data-price="20000" data-time="9" value="Корпоративный">Корпоративный сайт</option>
+                <option data-price="25000" data-time="12" value="Интернет-витрина">Интернет-витрина</option>
+                <option data-price="30000" data-time="15" value="Интернет-магазин">Интернет-магазин</option>
+            </select>
+            <div>Вы выбрали:</div>
+            <div class="list"></div>
+            <div>Стоимость: <span class="summ">0</span> руб.</div>
+            <div>Вы выбрали:</div>
+            <div class="list-day"></div>
+            <div>Время: <span class="summ-day">0</span> дней</div>
         </div>
-    </div> <!--подключить js калькулятор-->
-    </section>
+        <h3>Дизайн</h3>
+        <div class="box-select">
+            <select name="design[]" class="design select">
+                <option data-price="500" data-time="1" value="Жёсткий">Жёсткий</option>
+                <option data-price="1000" data-time="2" value="Гибкий">Гибкий</option>
+                <option data-price="2000" data-time="2" value="Интерфейсный">Интерфейсный</option>
+                <option data-price="2500" data-time="2" value="Динамический">Динамический</option>
+                <option data-price="3000" data-time="3" value="Полиграфический">Полиграфический</option>
+                <option data-price="3500" data-time="3" value="Комбинированный">Комбинированный</option>
+            </select>
+            <div>Вы выбрали:</div>
+            <div class="list"></div>
+            <div>Стоимость: <span class="summ">0</span> руб.</div>
+            <div>Вы выбрали:</div>
+            <div class="list-day"></div>
+            <div>Время: <span class="summ-day">0</span> дней</div>
+        </div>
+        <h3>Адаптивность</h3>
+        <div class="box-select">
+            <select name="adapt[]" class="select">
+                <option data-price="1000" data-time="1" value="Респонсив вёрстка">Респонсив вёрстка</option>
+                <option data-price="2000" data-time="2" value="Адаптивная вёрстка">Адаптивная вёрстка</option>
+                <option data-price="3000" data-time="3" value="Отдельная мобильная вёрстка">Отдельная мобильная вёрстка</option>
+            </select>
+            <div>Вы выбрали:</div>
+            <div class="list"></div>
+            <div>Стоимость: <span class="summ">0</span> руб.</div>
+            <div>Вы выбрали:</div>
+            <div class="list-day"></div>
+            <div>Время: <span class="summ-day">0</span> дней</div>
+        </div>
 
+        <div class="price-calc">
+            <p>
+                Сроки <span>&nbsp; дней</span>
+                <span class="total_span-day">0</span>
+                <span>(около) &nbsp;</span>
+            </p>
+            <p>
+                Стоимость <span>&nbsp;рублей</span>
+                <span class="total_span">0</span>
+                <!--<span class="approx">(примерно) &nbsp;</span>-->
+            </p>
+        </div>
+    </div> 
+    </section>
+    <!--js калькулятор-->
+    <script>
+        (function() {
+            document.querySelectorAll('.box-select').forEach(e => {
+                e.querySelector('.select').insertAdjacentHTML('afterBegin', `<option disabled selected style="background-color: #cccaca;">Выберите пункт...</option>`);
+                [...e.querySelector('.select').children].forEach((e,i) => e.dataset.id = i + 1 );
+            });
+        })();
+         
+        /*считаем деньги*/
+        function calc(e) {
+            let target = e.target.selectedOptions[0];
+            if (target.parentElement.classList.contains('select')) {
+                let summ = this.parentElement.querySelector('.summ');
+                let new_div = `<div class="position">${target.outerHTML.replace(/option/g,'span')}<span class="close">X</span></div>`;
+                target.disabled = true;
+                this.children[0].selected = true;
+                this.parentElement.querySelector('.list').insertAdjacentHTML('beforeEnd', new_div);
+                summ.textContent = +summ.textContent + +target.dataset.price; /*см. price/time*/
+            }
+            total();
+        }
+        /*считаем дни*/
+        function calcDay(e) {
+            let target = e.target.selectedOptions[0];
+            if (target.parentElement.classList.contains('select')) {
+                let summ = this.parentElement.querySelector('.summ-day');
+                let new_div = `<div class="position-day">${target.outerHTML.replace(/option/g,'span')}<span class="close">X</span></div>`;
+                target.disabled = true;
+                this.children[0].selected = true;
+                this.parentElement.querySelector('.list-day').insertAdjacentHTML('beforeEnd', new_div);
+                summ.textContent = +summ.textContent + +target.dataset.time; /*см. price/time*/
+            }
+            totalDay();
+        }
+         
+        /*удаляем деньги*/
+        function del(e) {
+            if (e.target.classList.contains('close')) {
+                let data_id = +e.target.previousElementSibling.dataset.id;
+                let parent = e.currentTarget.parentElement;
+                parent.querySelector(`.select [data-id="${data_id}"]`).disabled = false;
+                parent.querySelector(`.select`).children[0].selected = true;
+                parent.querySelector('.summ').textContent = +parent.querySelector('.summ').textContent - +e.target.previousElementSibling.dataset.price;
+                e.target.closest('.position').remove();
+            }
+            total();
+        }
+        /*удаляем дни*/
+        function delDay(e) {
+            if (e.target.classList.contains('close')) {
+                let data_id = +e.target.previousElementSibling.dataset.id;
+                let parent = e.currentTarget.parentElement;
+                parent.querySelector(`.select [data-id="${data_id}"]`).disabled = false;
+                parent.querySelector(`.select`).children[0].selected = true;
+                parent.querySelector('.summ-day').textContent = +parent.querySelector('.summ-day').textContent - +e.target.previousElementSibling.dataset.time;
+                e.target.closest('.position-day').remove();
+            }
+            totalDay();
+        }
+         
+        /*общая сумма денег*/
+        function total() {
+            document.querySelector('.total_span').textContent = [...document.querySelectorAll('.summ')].map(e => +e.textContent).reduce((a,b) => a + b);
+        }
+         
+        document.querySelectorAll('.box-select .select').forEach(e => e.addEventListener('change', calc) );
+        document.querySelectorAll('.box-select .list').forEach(e => e.addEventListener('click', del) );
+
+        /*общая сумма дней*/ 
+        function totalDay() {
+            document.querySelector('.total_span-day').textContent = [...document.querySelectorAll('.summ-day')].map(e => +e.textContent).reduce((a,b) => a + b);
+        }
+         
+        document.querySelectorAll('.box-select .select').forEach(e => e.addEventListener('change', calcDay) );
+        document.querySelectorAll('.box-select .list-day').forEach(e => e.addEventListener('click', delDay) );
+    </script>
+
+    <!--js Intersection Observer 2 применён в секции-->
     <section class="section"  id="statistics">
     <div class="statistics">
         <h2>Немного статистики</h2>
@@ -354,24 +489,24 @@ $(window).on('load', function () {
                 <div>
                     <li>
                         <img src="img/смайл.png" alt="смайл">
-                        <h3>120</h3>
+                        <h3 class="box box--grow">120</h3>
                         <h4>Счастливых клиентов</h4>
                     </li>
                     <li>
                         <img src="img/скобки.png" alt="скобки">
-                        <h3>4,600</h3>
+                        <h3 class="box box--grow">4,600</h3>
                         <h4>Часов работы</h4>
                     </li>
                 </div>
                 <div>
                     <li>
                         <img src="img/галочка.png" alt="галочка">
-                        <h3>340</h3>
+                        <h3 class="box box--grow">340</h3>
                         <h4>Проектов завершено</h4>
                     </li>
                     <li>
                         <img src="img/кубок.png" alt="кубок">
-                        <h3>23</h3>
+                        <h3 class="box box--grow">23</h3>
                         <h4>Награды получено</h4>
                     </li>
                 </div>
@@ -379,6 +514,30 @@ $(window).on('load', function () {
         </div>
     </div>
     </section>
+    <!--js Intersection Observer 1-->
+<script>
+    // функция всего лишь добавляет CSS-класс, который и осуществляет анимацию
+const scrollImations = (entries, observer) => {
+  entries.forEach((entry) => {
+    // анимируем, если элемент целиком попадает в отслеживаемую область
+    if(entry.isIntersecting && entry.intersectionRatio == 1) {
+      entry.target.classList.add('box--visible');
+    } else {
+      entry.target.classList.remove('box--visible');
+    }
+  });
+}
+// создаём обсервер с параметрами
+const options = {
+  threshold: 1.0,
+};
+const observer = new IntersectionObserver(scrollImations, options);
+
+const boxes = document.querySelectorAll('.box');
+boxes.forEach((box) => {
+  observer.observe(box);
+});
+</script>
 
     <section class="section"  id="feedback">
     <div class="feedback">
@@ -538,6 +697,97 @@ $(window).on('load', function () {
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/jquery.magnific-popup.min.js"></script> <!--всплывающие окна-->
     <script src="js/jqueryMain.js"></script>
-<!--<script src="js/jsMain.js"></script>-->
+    <script src="js/jsMain.js"></script>
+    <script>
+        
+//слайдер
+$(function(){
+    var tolerance = 100;
+    var speed = 650;
+    var interactiveElements = $('input, button, a');
+    var itemsLength = $('.panel').length;
+    var active = 1;
+    for (i=1; i<=itemsLength; i++){
+        var $layer = $(".panel:nth-child("+i+")");
+        var bgImg = $layer.attr("img");
+        $layer.css({
+            "background": "url("+bgImg+") no-repeat center / cover"
+        });
+    };
+    setTimeout(function() {
+        $(".panel").css({
+            "transition": "cubic-bezier(.4,.95,.5,1.5) "+speed+"ms"
+        });
+    }, 200);
+    $(".panel:not(:first)").addClass("right");
+    function swipeScreen() {
+        $('.swipe').on('mousedown touchstart', function(e) {
+            
+            var touch = e.originalEvent.touches;
+            var start = touch ? touch[0].pageX : e.pageX;
+            var difference;
+            $(this).on('mousemove touchmove', function(e) {
+                var contact = e.originalEvent.touches,
+                end = contact ? contact[0].pageX : e.pageX;
+                difference = end-start;
+            });
+            $(window).one('mouseup touchend', function(e) {
+                e.preventDefault();
+                // Переход вправо:
+                if (active < itemsLength && difference < -tolerance) {
+                    $(".panel:nth-child("+active+")").addClass("left");
+                    $(".panel:nth-child("+(active+1)+")").removeClass("right");
+                    active += 1;
+                    btnDisable();
+                };
+                // Переход влево:
+                if (active > 1 && difference > tolerance) {
+                    $(".panel:nth-child("+(active-1)+")").removeClass("left");
+                    $(".panel:nth-child("+active+")").addClass("right");
+                    active -= 1;
+                    btnDisable();
+                };
+                $('.swipe').off('mousemove touchmove');
+            });
+        });
+    };
+    swipeScreen();
+    interactiveElements.on('touchstart touchend touchup', function(e) {
+        e.stopPropagation();
+    });
+    // Кнопки:
+    $(".btn-prev").click(function(){
+        // Переход влево:
+        if (active > 1) {
+            $(".panel:nth-child("+(active-1)+")").removeClass("left");
+            $(".panel:nth-child("+active+")").addClass("right");
+            active -= 1;
+            btnDisable();
+        };
+    });
+    $(".btn-next").click(function(){
+        // Переход вправо:
+        if (active < itemsLength) {
+            $(".panel:nth-child("+active+")").addClass("left");
+            $(".panel:nth-child("+(active+1)+")").removeClass("right");
+            active += 1;
+            btnDisable();
+        };
+    });
+    function btnDisable() {
+        if (active >= itemsLength) {
+            $(".btn-next").prop("disabled", true);
+            $(".btn-prev").prop("disabled", false);
+        }
+        else if (active <= 1) {
+            $(".btn-prev").prop("disabled", true);
+            $(".btn-next").prop("disabled", false);
+        }
+        else {
+            $(".btn-prev, .btn-next").prop("disabled", false);
+        };
+    };
+});
+    </script>
 </body>
 </html>
