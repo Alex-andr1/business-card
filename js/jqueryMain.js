@@ -6,8 +6,26 @@ $(document).ready(function() {
 });
 
 //pop up (в начале)
-let delay_popup = 30000;
+let delay_popup = 20000; //время появления в милисек
 setTimeout("document.getElementById('bg_popup').style.display='block'", delay_popup);
+
+//маска на телефон
+$(document).ready(function() {
+    $("#phone_2").mask("+7(999) 999-9999");
+    
+    $('form').submit(function(event)/*событие*/{
+        if ($("#phone_2").val()== "" || $("popup-mail").val()== ""){
+        // если телефон = ничего или почта = ничего, то...
+            event.preventDefault(); /*сброс события и не отправка на сервер*/
+            alert("Некорректное заполнение полей!");
+        }
+    });
+});
+
+//отложенная анимация WOW
+$(document).ready(function() {
+    new WOW().init();
+});
 
 /*
 //слайдер

@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Урок 12 jQuery и Плагины</title>
+    <title>Урок 13 Ajax и PHP</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/magnific-popup.css">
     <link  href="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet"> <!--фоторама-->
+    <link rel="stylesheet" href="css/animate.css"/>  <!--анимация css-->
     <link rel="stylesheet" href="css/test_style.css">
 </head>
 <body>
@@ -53,7 +54,7 @@
       
     <div class="container">
       <br><br>
-        <h1>Navigation</h1>
+        <h1 class="animate__animated animate__bounce">Navigation</h1>
         <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel expedita alias obcaecati dolorum, esse rem adipisci dolore maiores, tempora vero facere. Consectetur, necessitatibus velit. Voluptate placeat dolore voluptatibus ea reprehenderit aut maxime quos repudiandae impedit soluta quod dolores explicabo, error, quasi quae quaerat in autem praesentium suscipit consequuntur. Debitis provident nisi vero atque, veniam, vel ullam possimus cupiditate nostrum nemo deleniti quia necessitatibus tempora facilis, voluptatem doloremque error. Dolorum, quaerat ipsam. Adipisci nobis consectetur voluptas ipsa necessitatibus natus magnam autem cum dolor odit asperiores ea, sit architecto magni. Laboriosam assumenda quisquam repellat fugiat officiis iste cumque, facere amet quaerat mollitia.
         </p>
@@ -63,27 +64,81 @@
   Launch demo modal
 </button>
 
-<!-- Modal -->
+<!-- Modal start -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Обратная связь</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel esse quisquam et. Voluptatibus voluptatum nulla deleniti adipisci accusamus incidunt officia.
+        
+        <form action="php/test.php" method="post">
+          <div class="row mb-3">
+            <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
+            <div class="col-sm-10">
+              <input type="email" name="user_email" class="form-control" id="inputEmail3"> <!--required-->
+            </div>
+          </div>
+          <div class="row mb-3">
+            <label for="inputPassword3" class="col-sm-2 col-form-label">Телефон</label>
+            <div class="col-sm-10">
+              <input type="phone" name="user_phone" class="form-control" id="phone_2"> <!--required-->
+            </div>
+          </div>
+          <fieldset class="row mb-3">
+            <legend class="col-form-label col-sm-6 pt-0">Вы первый раз на этом сайте?</legend>
+            <div class="col-sm-6">
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="radios" id="gridRadios1" value="option1" checked>
+                <label class="form-check-label" for="gridRadios1">
+                  Да
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="radios" id="gridRadios2" value="option2">
+                <label class="form-check-label" for="gridRadios2">
+                  Нет
+                </label>
+              </div>
+              <!--
+              <div class="form-check disabled">
+                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="option3" disabled>
+                <label class="form-check-label" for="gridRadios3">
+                  Third disabled radio
+                </label>
+              </div>
+              -->
+            </div>
+          </fieldset>
+          <div class="row mb-3">
+            <div class="col-sm-10"> <!--offset-sm-2 убрал-->
+              <div class="form-check">
+                <input class="form-check-input" name="check" type="checkbox" id="gridCheck1">
+                <label class="form-check-label" for="gridCheck1">
+                  Пользовательское соглашение
+                </label>
+              </div>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary">Войти</button>
+        </form>
+
       </div>
+      <!--
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+        <button type="button" class="btn btn-primary">Сохранить</button>
       </div>
+      -->
     </div>
   </div>
 </div>
+<!-- Modal end -->
 
     <section class="section" id="home">
-        <h2>Home</h2>
+        <h2 class="animate__animated animate__swing">Home</h2> <!--13е-->
             <p>
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio eligendi esse eaque aperiam, vero, molestias sequi quia commodi illum fuga hic non harum quam autem porro recusandae, fugit eum rerum odio mollitia cumque quibusdam cupiditate laborum laboriosam! Necessitatibus, officiis, qui perferendis laboriosam animi aliquid soluta assumenda quas laborum possimus excepturi tenetur quos debitis consectetur! Aliquid ut eaque ab veniam, obcaecati asperiores porro molestiae! Doloremque, ipsum neque! Voluptate laboriosam placeat provident atque veritatis, harum tempore repellat debitis sed iste maxime adipisci, in facilis dolorem deleniti. Hic veniam inventore cupiditate sit aperiam itaque cumque accusantium, eum assumenda harum iusto molestiae maxime aliquam.
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio eligendi esse eaque aperiam, vero, molestias sequi quia commodi illum fuga hic non harum quam autem porro recusandae, fugit eum rerum odio mollitia cumque quibusdam cupiditate laborum laboriosam! Necessitatibus, officiis, qui perferendis laboriosam animi aliquid soluta assumenda quas laborum possimus excepturi tenetur quos debitis consectetur! Aliquid ut eaque ab veniam, obcaecati asperiores porro molestiae! Doloremque, ipsum neque! Voluptate laboriosam placeat provident atque veritatis, harum tempore repellat debitis sed iste maxime adipisci, in facilis dolorem deleniti. Hic veniam inventore cupiditate sit aperiam itaque cumque accusantium, eum assumenda harum iusto molestiae maxime aliquam.
@@ -97,28 +152,11 @@
     <p>
         <a href="http://google.com/" target="_blank">Ссылка</a>
     </p> 
-    <!--<ol>
-        <li class="list">Первый
-            <p class="par">[eq</p>
-        </li>
-        <li>Второй
-            <p class="box"></p>
-        </li>
-        <li>Третий</li>
-    </ol>
-    </div>-->
+
     </section>
 
-    <!-- Add images to <div class="fotorama"></div> -->
-<div class="fotorama">
-  <img src="https://s.fotorama.io/1.jpg">
-  <img src="https://s.fotorama.io/2.jpg">
-  <img src="https://s.fotorama.io/3.jpg">
-  <img src="https://s.fotorama.io/4.jpg">
-</div>
-
     <section class="section" id="link"> 
-    <h2>Link</h2>
+    <h2 class="animate__animated animate__bounce wow" data-wow-delay="2s">Link</h2>
     <p>
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio eligendi esse eaque aperiam, vero, molestias sequi quia commodi illum fuga hic non harum quam autem porro recusandae, fugit eum rerum odio mollitia cumque quibusdam cupiditate laborum laboriosam! Necessitatibus, officiis, qui perferendis laboriosam animi aliquid soluta assumenda quas laborum possimus excepturi tenetur quos debitis consectetur! Aliquid ut eaque ab veniam, obcaecati asperiores porro molestiae! Doloremque, ipsum neque! Voluptate laboriosam placeat provident atque veritatis, harum tempore repellat debitis sed iste maxime adipisci, in facilis dolorem deleniti. Hic veniam inventore cupiditate sit aperiam itaque cumque accusantium, eum assumenda harum iusto molestiae maxime aliquam.
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio eligendi esse eaque aperiam, vero, molestias sequi quia commodi illum fuga hic non harum quam autem porro recusandae, fugit eum rerum odio mollitia cumque quibusdam cupiditate laborum laboriosam! Necessitatibus, officiis, qui perferendis laboriosam animi aliquid soluta assumenda quas laborum possimus excepturi tenetur quos debitis consectetur! Aliquid ut eaque ab veniam, obcaecati asperiores porro molestiae! Doloremque, ipsum neque! Voluptate laboriosam placeat provident atque veritatis, harum tempore repellat debitis sed iste maxime adipisci, in facilis dolorem deleniti. Hic veniam inventore cupiditate sit aperiam itaque cumque accusantium, eum assumenda harum iusto molestiae maxime aliquam.
@@ -136,74 +174,13 @@
     </div>
     </section>
 
-    <section class="section" id="dropdown">
-    <h2>Dropdown</h2>
-    <p>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio eligendi esse eaque aperiam, vero, molestias sequi quia commodi illum fuga hic non harum quam autem porro recusandae, fugit eum rerum odio mollitia cumque quibusdam cupiditate laborum laboriosam! Necessitatibus, officiis, qui perferendis laboriosam animi aliquid soluta assumenda quas laborum possimus excepturi tenetur quos debitis consectetur! Aliquid ut eaque ab veniam, obcaecati asperiores porro molestiae! Doloremque, ipsum neque! Voluptate laboriosam placeat provident atque veritatis, harum tempore repellat debitis sed iste maxime adipisci, in facilis dolorem deleniti. Hic veniam inventore cupiditate sit aperiam itaque cumque accusantium, eum assumenda harum iusto molestiae maxime aliquam.
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio eligendi esse eaque aperiam, vero, molestias sequi quia commodi illum fuga hic non harum quam autem porro recusandae, fugit eum rerum odio mollitia cumque quibusdam cupiditate laborum laboriosam! Necessitatibus, officiis, qui perferendis laboriosam animi aliquid soluta assumenda quas laborum possimus excepturi tenetur quos debitis consectetur! Aliquid ut eaque ab veniam, obcaecati asperiores porro molestiae! Doloremque, ipsum neque! Voluptate laboriosam placeat provident atque veritatis, harum tempore repellat debitis sed iste maxime adipisci, in facilis dolorem deleniti. Hic veniam inventore cupiditate sit aperiam itaque cumque accusantium, eum assumenda harum iusto molestiae maxime aliquam.
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio eligendi esse eaque aperiam, vero, molestias sequi quia commodi illum fuga hic non harum quam autem porro recusandae, fugit eum rerum odio mollitia cumque quibusdam cupiditate laborum laboriosam! Necessitatibus, officiis, qui perferendis laboriosam animi aliquid soluta assumenda quas laborum possimus excepturi tenetur quos debitis consectetur! Aliquid ut eaque ab veniam, obcaecati asperiores porro molestiae! Doloremque, ipsum neque! Voluptate laboriosam placeat provident atque veritatis, harum tempore repellat debitis sed iste maxime adipisci, in facilis dolorem deleniti. Hic veniam inventore cupiditate sit aperiam itaque cumque accusantium, eum assumenda harum iusto molestiae maxime aliquam.
-    </p>
-    <h5 class="weight newClass">Lorem ipsum dolor sit amet.</h5>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, dolore.</p>
-    <div>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.<span>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Qui, voluptate!</span> Recusandae eius blanditiis ab rerum provident beatae consequuntur incidunt maxime cumque nesciunt?</p>
-        <span>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Qui, voluptate!</span>
-    <p>
-        <a href="http://google.com/" target="_blank">Ссылка</a>
-    </p> 
-    </div>
-    </section>
-
-    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-      <div class="carousel-indicators">
-        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-      </div>
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img src="https://million-wallpapers.ru/wallpapers/4/72/18038241282065478898/starinnyj-gonochnyj-avtomobil-na-fone-goroda.jpg" 
-          class="d-block w-100" alt="car1" width="500px" height="700px">
-        </div>
-        <div class="carousel-item">
-          <img src="https://i.artfile.ru/4000x2667_1087709_[www.ArtFile.ru].jpg" 
-          class="d-block w-100" alt="car2" width="500px" height="700px">
-        </div>
-        <div class="carousel-item">
-          <img src="https://avatars.mds.yandex.net/get-zen_doc/170671/pub_5a360b6b9d5cb392d325f699_5a360b8b9b403cf714072d3e/scale_1200" 
-          class="d-block w-100" alt="car3" width="500px" height="700px">
-        </div>
-      </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"  data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Предыдущий</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"  data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Следующий</span>
-      </button>
-    </div>
-
-    <section class="" id="disabled">
-    <h2>Disabled</h2>
-    <p id="bigP" class="element-animation"> <!--style="background-color: aqua;"-->
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel adipisci cum natus et. Tenetur vitae iusto sequi delectus ipsam alias fugiat recusandae, minima quidem! Dolore harum dolorem vitae commodi suscipit nisi eaque tenetur distinctio 
-        corrupti ad fugiat, vel debitis nihil, obcaecati quibusdam iure porro aliquid sit dolorum, nostrum cum quae.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel adipisci cum natus et. Tenetur vitae iusto sequi delectus ipsam alias fugiat recusandae, minima quidem! Dolore harum dolorem vitae commodi suscipit nisi eaque tenetur distinctio 
-        corrupti ad fugiat, vel debitis nihil, obcaecati quibusdam iure porro aliquid sit dolorum, nostrum cum quae.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel adipisci cum natus et. Tenetur vitae iusto sequi delectus ipsam alias fugiat recusandae, minima quidem! Dolore harum dolorem vitae commodi suscipit nisi eaque tenetur distinctio 
-        corrupti ad fugiat, vel debitis nihil, obcaecati quibusdam iure porro aliquid sit dolorum, nostrum cum quae.
-    </p>
-
-    <img data-target="123" class="center image-link" src="https://catherineasquithgallery.com/uploads/posts/2021-02/1614387106_68-p-svetlii-razmitii-fon-dlya-fotoshopa-75.jpg" 
-     data-src="https://funart.pro/uploads/posts/2021-04/1618370614_21-funart_pro-p-skorostnie-mashini-mashini-krasivo-foto-21.jpg" href="https://funart.pro/uploads/posts/2021-04/1618370614_21-funart_pro-p-skorostnie-mashini-mashini-krasivo-foto-21.jpg" alt="car" width="650px" height="500px">
-  </section>
-    </div>
 
 <script src="js/jquery-3.6.0.min.js.js"></script>
 <script src="js/bootstrap.bundle.min.js"></script>
 <script src="js/jquery.magnific-popup.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script> <!--фоторама-->
+<script src="js/wow.min.js"></script>
+<script src="js/jquery.maskedinput.min.js"></script>
 <script src="js/myScript.js"></script>
 </body>
 </html>

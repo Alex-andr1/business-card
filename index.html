@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/magnific-popup.css"> <!--всплывающее окно-->
-    <link rel="stylesheet" href="css/animate.css"/> 
+    <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <link rel="stylesheet" href="css/font-icomoon.css">
     <link rel="stylesheet" href="css/style.css">
@@ -46,24 +46,24 @@ window.onload = function() {
 $(window).on('load', function () {
     $('.preloader').addClass("preloader-remove");     
 });
-    </script>-->
+</script> -->
 
     <!--popup-->
-    <div id="bg_popup">
+ <div id="bg_popup">
         <div id="popup">
             <div class="popup-message">
                 <h3>Для новых пользователей гарантирована скидка!</h3>
-                <form action="#">
+                <form action="php/mainPHP.php">
                     <div class="popup-inputs">
                         <div><input type="text" name="popup-name" class="popup-name" value="" placeholder="ФИО"></div>
-                        <div><input type="text" name="popup-phone" class="popup-phone" value="" placeholder="Телефон"></div>
+                        <div><input type="text" name="popup-tel" class="popup-tel" id="phone_2" value="" placeholder="Телефон"></div>
                         <div><input type="text" name="popup-mail" class="popup-mail" value="" placeholder="Email"></div>
                     </div>
                     <div>
                         <textarea name="popup-text" class="popup-text" value="" placeholder="Сообщение"></textarea>
                     </div>
                     <div>
-                        <input type="button" class="popup-button" value="Отправить"><!--submit-->
+                        <input type="submit" class="popup-button" value="Отправить">
                     </div>
                 </form>
             </div>     
@@ -136,9 +136,9 @@ $(window).on('load', function () {
     </section>
     </main>
 
-    <section class="section" id="aboutme">
         <div class="aboutme">
-            <h2>Обо мне</h2>
+            <h2 class="wow slideInLeft" data-wow-duration="2s" data-wow-delay="5s">Обо мне</h2> <!--wow animate-->
+            
             <p>
                 <img src="img/линия.png" alt="Черта заголовка">
             </p>
@@ -340,20 +340,21 @@ $(window).on('load', function () {
     <h2>Расчёт Стоимости</h2>
         <h3>Тип Сайта</h3>
         <div class="box-select">
-            <select name="type[]" class="type select">
-                <!--<option disabled selected value="Выберите пункт">Выберите пункт...</option>-->
+            <select name="type[]" class="type select" id="select">
+                <option disabled selected value="Выберите пункт">Выберите пункт...</option>
                 <option data-price="5000" data-time="3" value="Визитка">Визитка</option>
                 <option data-price="10000" data-time="6" value="Лендинг">Лендинг</option>
-                <option data-price="20000" data-time="9" value="Корпоративный">Корпоративный сайт</option>
+                <option data-price="20000" data-time="9" value="Корпоративный сайт">Корпоративный сайт</option>
                 <option data-price="25000" data-time="12" value="Интернет-витрина">Интернет-витрина</option>
                 <option data-price="30000" data-time="15" value="Интернет-магазин">Интернет-магазин</option>
             </select>
             <div>Вы выбрали:</div>
             <div class="list"></div>
             <div>Стоимость: <span class="summ">0</span> руб.</div>
-            <div>Вы выбрали:</div>
+            <!--закоментировать
+            <div>Вы выбрали:</div> 
             <div class="list-day"></div>
-            <div>Время: <span class="summ-day">0</span> дней</div>
+            <div>Время: <span class="summ-day">0</span> дней</div>-->
         </div>
         <h3>Дизайн</h3>
         <div class="box-select">
@@ -368,9 +369,10 @@ $(window).on('load', function () {
             <div>Вы выбрали:</div>
             <div class="list"></div>
             <div>Стоимость: <span class="summ">0</span> руб.</div>
-            <div>Вы выбрали:</div>
+            <!--закоментировать
+            <div>Вы выбрали:</div> 
             <div class="list-day"></div>
-            <div>Время: <span class="summ-day">0</span> дней</div>
+            <div>Время: <span class="summ-day">0</span> дней</div>-->
         </div>
         <h3>Адаптивность</h3>
         <div class="box-select">
@@ -382,16 +384,17 @@ $(window).on('load', function () {
             <div>Вы выбрали:</div>
             <div class="list"></div>
             <div>Стоимость: <span class="summ">0</span> руб.</div>
-            <div>Вы выбрали:</div>
+            <!--закоментировать
+            <div>Вы выбрали:</div> 
             <div class="list-day"></div>
-            <div>Время: <span class="summ-day">0</span> дней</div>
+            <div>Время: <span class="summ-day">0</span> дней</div>-->
         </div>
 
         <div class="price-calc">
             <p>
-                Сроки <span>&nbsp; дней</span>
-                <span class="total_span-day">0</span>
-                <span>(около) &nbsp;</span>
+                Сроки <!--<span>&nbsp; дней</span>-->
+                <span class="total_span-day" id="total_span-day">0 дней</span>
+                <!--<span>(около) &nbsp;</span>-->
             </p>
             <p>
                 Стоимость <span>&nbsp;рублей</span>
@@ -402,16 +405,18 @@ $(window).on('load', function () {
     </div> 
     </section>
     <!--js калькулятор-->
+    <script src="https://snipp.ru/cdn/jquery/2.1.1/jquery.min.js"></script>
     <script>
-        (function() {
+        /*деньги*/
+/*        (function() {
             document.querySelectorAll('.box-select').forEach(e => {
-                e.querySelector('.select').insertAdjacentHTML('afterBegin', `<option disabled selected style="background-color: #cccaca;">Выберите пункт...</option>`);
-                [...e.querySelector('.select').children].forEach((e,i) => e.dataset.id = i + 1 );
+                e.querySelector('.select')/*.insertAdjacentHTML('afterBegin'/*, `<option disabled selected style="background-color: #cccaca;">Выберите пункт...</option>`)*/;
+/*                [...e.querySelector('.select').children].forEach((e,i) => e.dataset.id = i + 1 );
             });
         })();
          
         /*считаем деньги*/
-        function calc(e) {
+/*        function calc(e) {
             let target = e.target.selectedOptions[0];
             if (target.parentElement.classList.contains('select')) {
                 let summ = this.parentElement.querySelector('.summ');
@@ -420,10 +425,10 @@ $(window).on('load', function () {
                 this.children[0].selected = true;
                 this.parentElement.querySelector('.list').insertAdjacentHTML('beforeEnd', new_div);
                 summ.textContent = +summ.textContent + +target.dataset.price; /*см. price/time*/
-            }
+/*            }
             total();
         }
-        /*считаем дни*/
+        /*считаем дни*/ /*
         function calcDay(e) {
             let target = e.target.selectedOptions[0];
             if (target.parentElement.classList.contains('select')) {
@@ -432,13 +437,13 @@ $(window).on('load', function () {
                 target.disabled = true;
                 this.children[0].selected = true;
                 this.parentElement.querySelector('.list-day').insertAdjacentHTML('beforeEnd', new_div);
-                summ.textContent = +summ.textContent + +target.dataset.time; /*см. price/time*/
+                summ.textContent = +summ.textContent + +target.dataset.time; /*см. price/time*//*
             }
             totalDay();
-        }
+        }*/
          
         /*удаляем деньги*/
-        function del(e) {
+/*        function del(e) {
             if (e.target.classList.contains('close')) {
                 let data_id = +e.target.previousElementSibling.dataset.id;
                 let parent = e.currentTarget.parentElement;
@@ -449,7 +454,7 @@ $(window).on('load', function () {
             }
             total();
         }
-        /*удаляем дни*/
+        /*удаляем дни*/ /*
         function delDay(e) {
             if (e.target.classList.contains('close')) {
                 let data_id = +e.target.previousElementSibling.dataset.id;
@@ -460,23 +465,30 @@ $(window).on('load', function () {
                 e.target.closest('.position-day').remove();
             }
             totalDay();
-        }
+        }*/
          
         /*общая сумма денег*/
-        function total() {
+/*        function total() {
             document.querySelector('.total_span').textContent = [...document.querySelectorAll('.summ')].map(e => +e.textContent).reduce((a,b) => a + b);
         }
          
         document.querySelectorAll('.box-select .select').forEach(e => e.addEventListener('change', calc) );
         document.querySelectorAll('.box-select .list').forEach(e => e.addEventListener('click', del) );
 
-        /*общая сумма дней*/ 
+        /*общая сумма дней*/ /*
         function totalDay() {
             document.querySelector('.total_span-day').textContent = [...document.querySelectorAll('.summ-day')].map(e => +e.textContent).reduce((a,b) => a + b);
         }
          
         document.querySelectorAll('.box-select .select').forEach(e => e.addEventListener('change', calcDay) );
         document.querySelectorAll('.box-select .list-day').forEach(e => e.addEventListener('click', delDay) );
+        */
+        $('#select').click(function(){
+            let daysType = $(".type option:selected").attr("data-time");
+            $('#total_span-day').html('меньше ' + daysType + ' дней');
+            let priceType = $(".type option:selected").attr("data-price");
+            $('#total_span').html(priceType + ' рублей');
+        });
     </script>
 
     <!--js Intersection Observer 2 применён в секции-->
@@ -637,7 +649,7 @@ boxes.forEach((box) => {
                     <div>
                         <img src="img/труба.png" alt="труба">
                         <p>
-                            +7 (800) 555-35-55
+                            <a href="tel:+7(800)-555-35-55">+7 (800) 555-35-55</a>
                         </p>
                     </div>
                 </div>
@@ -696,8 +708,13 @@ boxes.forEach((box) => {
     <script src="js/jquery-3.6.0.min.js.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/jquery.magnific-popup.min.js"></script> <!--всплывающие окна-->
+    <script src="js/jquery.maskedinput.min.js"></script> <!--маска на телефон-->
+    <script src="js/wow.min.js"></script>
+    <script>
+    new WOW().init();
+    </script>
     <script src="js/jqueryMain.js"></script>
-    <script src="js/jsMain.js"></script>
+    <script src="js/jsMain.js"></script> <!--выведение Alert-->
     <script>
         
 //слайдер
