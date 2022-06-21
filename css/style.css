@@ -211,7 +211,11 @@ main{
     color: #e88604;
 }
 .menu li a:active{
+    color: #d17700;
     transform: scale(1.2);
+}
+li .active{
+    color: #fa8b28 !important; /*перебор в Navbar*/
 }
 .menu li:nth-child(2){
     animation-delay: 0.4s;

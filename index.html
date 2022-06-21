@@ -49,7 +49,7 @@ $(window).on('load', function () {
 </script> -->
 
     <!--popup-->
- <div id="bg_popup">
+<!-- <div id="bg_popup">
         <div id="popup">
             <div class="popup-message">
                 <h3>Для новых пользователей гарантирована скидка!</h3>
@@ -69,7 +69,7 @@ $(window).on('load', function () {
             </div>     
             <a class="popup-close" title="Закрыть" onclick="document.getElementById('bg_popup').style.display='none';">Закрыть</a>
         </div>
-    </div>
+    </div>-->
 
     <header>
         <nav>
@@ -136,6 +136,7 @@ $(window).on('load', function () {
     </section>
     </main>
 
+    <section class="section"  id="aboutme">
         <div class="aboutme">
             <h2 class="wow slideInLeft" data-wow-duration="2s" data-wow-delay="5s">Обо мне</h2> <!--wow animate-->
             
@@ -709,14 +710,15 @@ boxes.forEach((box) => {
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/jquery.magnific-popup.min.js"></script> <!--всплывающие окна-->
     <script src="js/jquery.maskedinput.min.js"></script> <!--маска на телефон-->
+    <script src="js/spin.js"></script>
     <script src="js/wow.min.js"></script>
     <script>
     new WOW().init();
     </script>
     <script src="js/jqueryMain.js"></script>
-    <script src="js/jsMain.js"></script> <!--выведение Alert-->
-    <script>
-        
+    <!--<script src="js/jsMain.js"></script> <!--выведение Alert-->
+    
+<script>       
 //слайдер
 $(function(){
     var tolerance = 100;
@@ -805,6 +807,7 @@ $(function(){
         };
     };
 });
-    </script>
+
+</script>
 </body>
 </html>
