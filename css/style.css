@@ -7,8 +7,7 @@
 	font-weight: normal;
 	font-style: normal;
 }
-/*предлоадер.............................................................................................................................*/
-
+/*прелоадер.............................................................................................................................*/
 
 .preloader {
     position: fixed;
@@ -138,6 +137,21 @@
         padding: 5px;
     }
 }
+
+/*Стрелка вверх .....................................................................................*/
+.scrollup{
+    width: 50px;
+    height: 50px;
+    opacity:0.5;
+    position:fixed;
+    bottom: 10%;
+    left: 10%;
+    display:none;
+    z-index: 10;
+    text-indent: 9999px;
+    background: url('../img/icon_top.png') no-repeat;
+}
+
 /*Начало страницы...........................................................................................................................*/
 body{
     font-family: Arial, sans-serif;
@@ -249,10 +263,10 @@ li .active{
     display: inline-block;
     width: 100%;
     height: 100%; /*calc(100% - 60px);*/
-    background: url(../img/тень.png)
+    background: url(../img/shadow.png)
     0 calc(100% + 30px) no-repeat,/*тень*/ 
-    url(../img/парень.png)
-    90% 100%/auto 85% no-repeat, /*расположение длины и ширины/размер длины и ширины*/
+    url(../img/man.png)
+    85% 100%/auto 85% no-repeat, /*расположение длины и ширины/размер длины и ширины*/
     url(../img/bg-1hello.jpg)
     center/cover no-repeat;/*фон*/
 }
@@ -260,7 +274,7 @@ li .active{
     width: 100%;
     height: 238px;
     float: right;
-    background: url(../img/парень.png)
+    background: url(../img/man.png)
     95% 100%/auto 554px no-repeat;/*auto 85%*/
   /*  -webkit-animation: photomove 1s ease forwards;
     -o-animation: photomove 1s ease forwards;
@@ -304,7 +318,9 @@ li .active{
     font-size: 19px;/*22px;*/
     color: #79818d;
 }
+
 .title__container input{ /*важное и простое оформление*/
+    display: none;
     text-align: center;
     height: 34px; /*40px;*/
     border: 2px solid #6d7682;
@@ -326,6 +342,29 @@ li .active{
 }
 .title__container input:active{
     transform: scale(1.1);
+}
+.title-button button{
+    margin-top: 10px;
+}
+.title-button a{
+    padding: 7px 13px;
+    margin: 0 9px;
+    text-decoration:none;
+    height: 34px;
+    font-size: 13px;
+    color: #6d7682;
+    border: 2px solid #6d7682;
+    border-radius: 4px;
+    transform: scale(1);
+}
+.title-button a:hover{
+    color: #fff;
+    background: #344051;
+    transition: all 0.3s;
+}
+.title-button button:active{
+    transform: scale(1.1);
+    transition: all 0.5s;
 }
 @keyframes titlemove{
     from{
@@ -413,31 +452,40 @@ li .active{
 }
 .aboutme .img1{
     margin: 2% 0 2%;
+    width: 200px;
+    height: 240px;
+    border-radius: 100px;
+    -webkit-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+    filter: grayscale(100%);
 }
 .aboutmeinfo p{
     margin: auto; /*центр*/
     padding-bottom: 34px;
     width: 50%;
     font-size: 17px;
-    text-align: left;
+    text-align: justify;
     color: #3f495a;
 }
-.aboutme button{
+.aboutme-button a{
+    margin: 0 12px;
+    padding: 7px 10px;
+    text-decoration:none;
     height: 34px;
     font-size: 16px;
     color: #6f707e;
     border: 2px solid #6f707e;
     border-radius: 4px;
-    padding: 0 13px;
     transform: scale(1);
 }
-.aboutme button:hover{
+.aboutme-button a:hover{
     color: #fff;
     background: #6f707e;
     transition: all 0.3s;
 }
-.aboutme button:active{
+.aboutme-button button:active{
     transform: scale(1.1);
+    transition: all 0.5s;
 }
 @media (max-width: 768px){
     .aboutme h2{
@@ -542,16 +590,18 @@ li .active{
     transition: transform 2s ease-in;
 }
 .box--spin.box--visible{
-    transform: rotate(720deg);
+    transform: rotate(360deg);
 }
 .box--grow.box--visible{
-    transform: scale(1.5);
+    transform: scale(2);
 }
 
 /*ОКНО 4 Кейсы...................................................................................*/
 
 .cases{
     text-align: center;
+    margin: 0 15%;
+    height: auto;
 }
 .cases h2{
     margin: 110px 0 33px 0;
@@ -563,162 +613,94 @@ li .active{
     margin: 40px auto;
     color: #3f495a;
 }
-.cases_img{
-    width: 70%;
-    height: auto;
+.justify-content-between{
+    margin-top: 10px;
 }
-.first-carousel{
-    width: 70%;
-    margin: 0 15%;
-    height: auto;
+.carousel-control-next, .carousel-control-prev{
+	height: 70%;
 }
-.carousel-info{
-    position: relative;
-    color: black;
-    left: 0%;
+#carouselReview .carousel-indicators{
+    margin-bottom: -10px;
 }
+#carouselReview .carousel-indicators [data-bs-target]{
+    background-color: #ff6c00;
+}
+.carousel-control-next-icon, .carousel-control-prev-icon{
+   background-color: #ff6c00; 
+}
+/* скрыть три линии на слайдере
 .carousel-indicators{
-    margin-bottom: 22rem;
-}
-.cases-info{
-    display: flex;
-}
-.carousel-control-prev,
-.carousel-control-next{
-    bottom: 35%;
-}
-.carousel-control-next-icon, 
-.carousel-control-prev-icon{
-    box-shadow: 0 0 18px rgb(0 0 0);
-    background-color: #1c2534;
-}
-.mobile-cases-info{
     display: none;
-}
-.example{
-    margin: 15px 30px 0 10px;
-    width: 33%; /*287px*/
+}*/
+.description_left h3{
+    font-size: 25px;
     text-align: left;
 }
-.example h3{
-    font-size: 25px;
-    text-transform: uppercase;
-    color: #384354;
-    font-weight: bold;
+.description_left p{
+    font-size: 17px;
+    margin: 10px 0;
+    text-align: left;
 }
-.example p{
-    font-size: 16px;
-    color: #3f495a;
-    margin: 17px;
-}
-.example input{
-    color:#fff;
-    font-size: 20px;
-    text-transform: uppercase;
-    border: 1px solid #63b5ae;
-    background: #63b5ae;
-    border-radius: 4px;
-    height: 44px;
-    padding: 0 10%;
-    transform: scale(1);
-    margin-bottom: 20px;
-}
-.example input:hover{
-    background: #fff;
-    color: #63b5ae;
-    transition: all 0.3s;
-}
-.example input:active{
-    transform: scale(1.1);
-}
-.projectname{
+.description_left a{
     margin-top: 15px;
-    text-align: left;
-}
-.projectname h3{
-    font-size: 25px;
-    color: #384354;
-    margin-bottom: 5px;
-}
-.projectname p{
+    display: block;
+    width: 100%;
+    background: #63b5ae;
+    height: 44px;
+    line-height: 44px;
+    text-align: center;
+    color: white;
     font-size: 20px;
-    color: #3f495a;
-    line-height: 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.3s;
+    transform: scale(1);
 }
-@media (max-width: 768px) {
-    .carousel-control-prev,
-    .carousel-control-next{
-        bottom: 50%;
+.description_left a:hover{
+    background: #4e938d;
+}
+.description_right h4{
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+.description_right p{
+    font-size: 20px;
+    text-align: justify;
+    height: 200px;
+}
+
+@media (max-width: 768px){
+    .carousel-control-next, 
+    .carousel-control-prev{
+        height: 25%;
     }
-    .cases h2{
-        margin: 90px 0 13px;
-        font-size: 23px;
-    }
-    .cases>p{
-        margin: 5px 15%;
-    }
-    .cases_img{
-        width: 70%;
-    }
-    .projectname p{
-        font-size: 16px;
-    }
-    .example p{
-        margin-left: 0;
-    }
-    
 }
 @media (max-width: 425px) {
-    .carousel-control-prev,
-    .carousel-control-next{
-        bottom: 0;
+    .cases {
+        text-align: center;
+        margin: 0 5%;
     }
-    .cases-info{
-        position: relative;
-        width: 80%;
-        margin: 0 10%;
+    .carousel-control-next, 
+    .carousel-control-prev{
+        height: 25%;
     }
-    .cases-info div{
-       flex-direction: column;
-    }
-    .mobile-cases-info{
-        display: flex;
-        flex-direction: column-reverse;
-    }
-    .first-carousel{
-        width: 80%;
-        margin: 0 10%;
-    }
-    .carousel-indicators{
-        margin-bottom: 0rem;
-    }
-    .mobile-cases-info h3{
-        font-size: 21px;
-    }
-    .example h3 {
-        margin-bottom: 0;
-    }
-    .example p{
-        margin: 0;
-    }
-    .example input {
-        font-size: 15px;
-        height: 33px;
-    }
-    .projectname p {
-        font-size: 14px;
+    .description_right p {
+        font-size: 18px;
     }
 }
+
+
 /*ОКНО 5 Расчёт стоимости........................................................................*/
 
 .price{
+    margin-top: 80px;
     margin-left: 22%;
     width: 56%;
-    padding: 0 2%;
+    padding: 1px 1%;
     background: url(../img/bg-6calc.jpg);
 }
 .price h2{
-    margin-top: 50px;
+    margin-top: 25px;
     font-size: 40px;
     color: #1c2534;
     text-align: center;
@@ -729,17 +711,19 @@ li .active{
     color: #1c2534;
     text-transform: uppercase;
 }
+/*
 .price .type{
     padding-right: 201px;
 }
 .price .design{
     padding-right: 216px;
-}
+}*/
 .price select{
     font-size: 16px;
+    width: 90%;
     color: #737373;
     margin: 0 0 20px 30px;
-    padding-right: 125px;
+   /* padding-right: 125px;*/
 }
 .price-calc{
     margin-top: 58px;
@@ -789,6 +773,30 @@ li .active{
 #total_span-day{
     font-size: 20px;
     color: #1c2534;
+
+}
+.price-button button{ /*пример идеальной кнопки с ссылкой*/
+    margin-top: 25px;
+    text-align: center;
+}
+.price-button a{
+    padding: 7px 10px;
+    text-decoration:none;
+    height: 34px;
+    font-size: 16px;
+    color: #6f707e;
+    border: 2px solid #6f707e;
+    border-radius: 4px;
+    transform: scale(1);
+}
+.price-button a:hover{
+    color: #fff;
+    background: #6f707e;
+    transition: all 0.3s;
+}
+.price-button button:active{
+    transform: scale(1.1);
+    transition: all 0.5s;
 }
 @media (max-width: 768px){
     .price h2{
@@ -797,23 +805,14 @@ li .active{
 }
 @media (max-width: 425px){
     .price{
-        margin-left: 15%;
-        width: 70%;
+        margin-left: 5%;
+        width: 90%;
     }
     .price h3{
         font-size: 17px;
         margin: 50px auto 23px;
     }
-    .price select{
-        margin-left: -25px;
-        padding-right: 5px;
-    }
-    .price .type{
-        padding-right: 81px;
-    }
-    .price .design{
-        padding-right: 96px;
-    }
+    
 }
 
 /*ОКНО 6 Немного статистики......................................................................*/
@@ -827,7 +826,7 @@ li .active{
     background-attachment: fixed;
 }
 .statistics h2{
-    padding: 107px 0 33px 0;
+    padding: 80px 0 25px 0;
     font-size: 33px;
     text-transform: uppercase;
     color: #263244;
@@ -919,7 +918,6 @@ li .active{
     transform: scale(1.5);
 }*/
 /*ОКНО 7 Отзывы..................................................................................*/
-
 .feedback{
     text-align: center;
 }
@@ -929,165 +927,84 @@ li .active{
     text-transform: uppercase;
     color: #263244;
 }
-.feedback>p>img{
-    margin: 58px 0 39px;
-}
 .feedback p{
-    margin: 0 auto 38px;
-    width: 36%;
-}
-.fb-list{
-    margin: 0 47%;
-}
-.fb-list li{
-    float: left;
-    margin-left: 14px;
-}
-/*слайдер*/
-.sl-container{
+    margin: 0 10%;
     width: 80%;
-    height: 500px;
-    margin: 20px 10%;
-    padding: 0;
-    font-family: 'Roboto', sans-serif;
-    font-size: 1em;
-    line-height: 1.5em;
-    color: #000;
-    position: relative;
+    height: 100px;
+    margin-bottom: 15px;
 }
-.swipe{
-    position: relative;
-    width: 100%;
-    height: 100%;
-    background: #eee;
-    overflow: hidden;
+.feedback_img{
+    margin: 2% 0 2%;
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    -webkit-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+    filter: grayscale(100%);
 }
-.panel{
-    position: absolute;
-    width: 100%;
-    min-height: 100%;
-    top: 0;
-    left: 0;
-    padding: 20px;
+.reviews_container{
+    padding-bottom: 90px;
 }
-.panel-info{
-    position: absolute; 
-    top: 7%;
-    right: 33%;
+.reviews_container h2{
+     text-align: center;
+    max-width: 390px;
+    font-size: 33px;
+    margin: 0px auto 30px;
+    padding-bottom: 5px;
+    text-transform: uppercase;
+    padding-top: 100px;
 }
-.left{
-    left: -100%;
+.review{
+    text-align: center;
 }
-.right{
-    left: 100%;
+.review img{
+    margin-bottom: 36px;
 }
-.sl-info{
-    position: absolute;
-    width: 70%;
-    max-width: 30%;
-    bottom: 15%;
-    right: 5%;
-    pointer-events: none;
+.review_text{
+    font-size: 17px;
+    line-height: 24px;
+    margin-bottom: 36px;
 }
-.inner{
-    position: relative;
-    padding: 0.5em 2em 1em;
-    background: #FFFFFF;
-    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+.review_author{
+    font-size: 16px;
+    line-height: 24px;
 }
-.inner h3{
-    font-size: 1.7em;
-    font-weight: normal;
-    color: #344051;
+.review_author span{
+    font-weight: 800;
 }
-.inner p{
-    font-family: Verdana, sans-serif;
+/*Корректировки слайдера*/
+.justify-content-center {
+    margin-top: 15px;
 }
-.sl-info:before{
-    content: "";
-    position: absolute;
-    width: 65%;
-    height: 80%;
-    top: 0;
-    left: 0;
-    transform: translate(-10px, -10px);
-    background: #344051;
+#carouselReview .carousel-indicators {
+    margin-bottom: -5px;
 }
-.sl-buttons{
-    position: absolute;
-    bottom: -50px;
-    right: 5%;
-    pointer-events: all;
-}
-.sl-buttons button{
-    transition: ease .4s;
-}
-.sl-buttons button svg{
-    margin: 10px 0;
-}
-.sl-buttons .btn-prev,
-.sl-buttons .btn-next{
-    width: 60px;
-    height: 60px;
-    margin-left: 10px;
-    border: 2px solid #344051;
-    outline: none;
-    border-radius: 60px;
-    color: #FFFFFF;
-    background: #344051;
-    box-shadow: 0px 3px 15px 2px rgba(0,0,0,.5);
-    cursor: pointer;
-}
-.sl-buttons button:hover{
-    box-shadow: 0px 3px 30px 3px rgba(0,0,0,.5);
-}
-.sl-buttons button:disabled{
-    box-shadow: 0px 1px 5px 0px rgba(0,0,0,.5);
-    background: #BFE2FF;
-    cursor: default;
-}
-.optional{
-    width: 80%;
-    max-width: 680px;
-    margin: 6em auto;
-    padding: 2em 3em;
-    box-shadow: 
-    0 3px 12px rgba(0,0,0,0.16), 
-    0 3px 12px rgba(0,0,0,0.23);
+.carousel-indicators [data-bs-target] {
+    width: 35px;
+    height: 4px;
 }
 @media (max-width: 768px){
     .feedback h2{
-        margin: 90px 0 5px 0;
+        margin-top: 40px;
         font-size: 23px;
+    }
+    .feedback p{
+        margin: 0 2%;
+        width: 98%;
     }
 }
 @media (max-width: 425px){
-    .feedback {
-        padding-bottom: 90px;
+    .feedback{
+        padding-bottom: 5px;
+    }
+    .feedback h2{
+        margin-top: 90px;
     }
     .feedback p{
-        margin: 0 auto 38px;
-        width: 70%;
+        height: 145px;
     }
-    .panel-info{
-        position: absolute;
-        top: 3%;
-        right: -6%;
-    }
-    .sl-info{
-        position: absolute;
-        width: 91%;
-        max-width: 94%;
-        bottom: -120px;
-        right: 0;
-    }
-    .inner{
-        padding: .5em 1.5em;
-        box-shadow: none;
-    }
-    .sl-buttons{
-        bottom: -25px;
-        right: 28%;
+    #carouselReview .carousel-indicators {
+        margin-bottom: 55px;
     }
 }
 
@@ -1096,9 +1013,10 @@ li .active{
 .contacts{
     text-align: center;
     height: 808px;
+    /*background: url(https://catherineasquithgallery.com/uploads/posts/2021-02/1612486159_10-p-noutbuk-na-serom-fone-13.jpg) center/100% 808px no-repeat;*/
     background: url(../img/bg-4contacts.jpg)
     center/100% 808px no-repeat; /*вместо auto поставить 100%*/
-    margin-top: 91px;
+    margin-top: 58px;
     color: #fff;
 }
 .contacts h2{
@@ -1235,12 +1153,10 @@ li .active{
     }
 }
 
-/*ОКНО 9 Карта.................................................................................*/
+/*ОКНО 9 Футер.................................................................................*/
 
-.geo{
-    background: url(../img/bg-5map.jpg)
-    center/auto 356px no-repeat;
-    height: 356px;
+.workplace{
+    margin-top: 6px;
 }
 .copyright{
     display: flex;

@@ -7,4 +7,11 @@ $text = $_POST['popup-text'];
 
 echo "Успешно отправлено <br>". $name . "<br>" . $phone . "<br>" . $email . "<br>" . $text; 
 
-?> 
+$mainname = $_POST[''];
+$mainphone = $_POST[''];
+$mainemail = $_POST[''];
+$maintext = $_POST[''];
+
+echo "Успешно отправлено <br>". $name . "<br>" . $phone . "<br>" . $email . "<br>" . $text; 
+
+?>
