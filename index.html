@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="description" content="Это моя первая страница"> 
     <meta name="author" content="Alexander">
-    <meta name="keywords" content="Сайт визитка, разработка сайтов ...">
+    <meta name="keywords" content="Сайт визитка, разработка сайтов, создание саайтов">
     <meta name="robots" content="noindex, nofollow">
     <meta property="og:title" content="Это моя первая страница"> 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,68 +12,14 @@
     <title>Александр Лобанов - Веб-разработчик</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/magnific-popup.css"> <!--всплывающее окно-->
+    <link rel="stylesheet" href="css/magnific-popup.css">
     <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <link rel="stylesheet" href="css/font-icomoon.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <!--preloader-->
-<!-- <div class="preloader">
-        <div>
-            <div>
-                <div>
-                    <div>
-                        <div>
-                            <div>
-                                <div>
-                                    <div>
-                                        <div></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-<script>
-window.onload = function() {
-    document.querySelector('.preloader').classList.add("preloader-remove");
-};
-$(window).on('load', function () {
-    $('.preloader').addClass("preloader-remove");     
-});
-</script> -->
 
-    <!--цвет #332416 рыже-чёрный-->
-
-    <!--popup-->
-<!-- <div id="bg_popup">
-        <div id="popup">
-            <div class="popup-message">
-                <h3>Для новых пользователей гарантирована скидка!</h3>
-                <form action="php/mainPHP.php">
-                    <div class="popup-inputs">
-                        <div><input type="text" name="popup-name" class="popup-name" value="" placeholder="ФИО"></div>
-                        <div><input type="text" name="popup-tel" class="popup-tel" id="phone_2" value="" placeholder="Телефон"></div>
-                        <div><input type="text" name="popup-mail" class="popup-mail" value="" placeholder="Email"></div>
-                    </div>
-                    <div>
-                        <textarea name="popup-text" class="popup-text" value="" placeholder="Сообщение"></textarea>
-                    </div>
-                    <div>
-                        <input type="submit" class="popup-button" value="Отправить">
-                    </div>
-                </form>
-            </div>     
-            <a class="popup-close" title="Закрыть" onclick="document.getElementById('bg_popup').style.display='none';">Закрыть</a>
-        </div>
-    </div>-->
-
-    <!--Стрелка наверх-->
     <a href="#" class="scrollup">Наверх</a>
 
     <header>
@@ -122,34 +68,24 @@ $(window).on('load', function () {
     <section class="main">
         <div class="container h-100">
             <div class="row align-items-center h-100">
-                <div class="col-lg-5 mt-5 pt-5">        
+                <div class="col-lg-6 mt-5 pt-5">        
                     <div class="title__container">
                         <h1>Управляй информацией, <br> управляй миром!</h1>
-                    <!--<h1><i class="icon-unicorn-custom"></i>Привет <br> Я Александр Лобанов</h1> Old but gold -->
                         <h4>
-                            <i class="fa fa-css3 custom-css3" aria-hidden="true"></i>
                             Фулл стек веб-разработчик <br> Александр Лобанов 
                         </h4>
-                    <!-- временно не интересно
-                        <input type="button" value="Обо мне">
-                        <input type="button" value="Мои работы">
-                        <div class="title-button">
-                            <button><a href="#aboutme">Обо мне</a></button>
-                            <button><a href="#cases">Мои работы</a></button>
-                        </div>-->
                     </div>
                 </div>
             </div>
         </div>
         <div class="main_photo">
-            <!--сделать выдвижной-->
         </div>
     </section>
     </main>
 
     <section class="section"  id="aboutme">
         <div class="aboutme">
-            <h2 class="wow slideInLeft" data-wow-duration="2s" data-wow-delay="5s">Обо мне</h2> <!--wow animate-->
+            <h2 class="wow slideInLeft" data-wow-duration="2s" data-wow-delay="5s">Обо мне</h2>
             
             <p>
                 <img src="img/line.png" alt="Черта заголовка">
@@ -172,19 +108,17 @@ $(window).on('load', function () {
             </p>
             </div>
             <div class="aboutme-button">
-                <button><a href="file/Lobanov_Aleksandr.pdf" download><img src="img/icon_save.png" alt="иконка"> Скачать резюме</a></button>
-                <button><a href="file/Lobanov_Aleksandr.pdf">Открыть файл в браузере</a></button>
-                <!--<button><img src="img/иконка_скачать.png" alt="иконка"> Скачать резюме</button>-->
+                <a href="file/Lobanov_Aleksandr.pdf" download><img src="img/icon_save.png" alt="иконка"> Скачать резюме</a>
+                <a href="file/Lobanov_Aleksandr.pdf">Открыть файл в браузере</a>
             </div>
         </div>
     </section>
 
-    <!--js Intersection Observer 1 применён в секции-->
     <section class="section"  id="cando">
     <div class="cando">
         <h2>Что я умею</h2>
         <img src="img/line.png" alt="Черта заголовка">
-        <div class="skills"> <!--animate__animated animate__rubberBand">-->
+        <div class="skills">
             <ul>
                 <div>
                     <li>
@@ -223,7 +157,6 @@ $(window).on('load', function () {
     </div>
     </section>
 
-    <!--дополнить ссылкой на гитхаб и алерт-->
     <section class="section"  id="cases">
         <div class="cases">
             <h2>Кейсы</h2>
@@ -247,8 +180,8 @@ $(window).on('load', function () {
                                 <h3>Клиет:</h3>
                                 <p>Бекенд разработчик</p>
                                 <h3>Вебсайт:</h3>
-                                <p>https://beget.com/ru</p>
-                                <a href="https://beget.com/ru">Посетить сайт</a> <!--добавить ссылку на гитхабе-->
+                                <p>www.github.com</p>
+                                <a href="https://github.com/Alex-andr1/jacket-shop" target="_blank">Посмотреть код</a>
                             </div>
                             <div class="col-12 col-md-9 description_right mt-3 mt-md-0">
                                 <h4>Стартовая страница интернет-магазина</h4>
@@ -266,14 +199,14 @@ $(window).on('load', function () {
                                 <h3>Клиет:</h3>
                                 <p>Частное Лицо</p>
                                 <h3>Вебсайт:</h3>
-                                <p>https://beget.com/ru</p>
-                                <a href="https://beget.com/ru">Посетить сайт</a> <!--добавить ссылку на гитхабе-->
+                                <p>www.github.com</p>
+                                <a href="https://github.com/Alex-andr1/batman2022" target="_blank">Посмотреть код</a>
                             </div>
                             <div class="col-12 col-md-9 description_right mt-3 mt-md-0">
                                 <h4>Логотип фильма Бэтмен 2022</h4>
                                 <p>
                                     Удобный одностраничный сайт и адаптивный под все смартфоны и мониторы ПК. 
-                                    Проест использовался в рекламных целях и для просмотров разных трейлеров.
+                                    Проект использовался в рекламных целях и для просмотров разных трейлеров.
                                 </p>
                             </div>
                         </div>
@@ -285,8 +218,8 @@ $(window).on('load', function () {
                                 <h3>Клиет:</h3>
                                 <p>Skillbox</p>
                                 <h3>Вебсайт:</h3>
-                                <p>https://in_development</p>
-                                <a href="https://beget.com/ru">Посетить сайт</a> <!--добавить окно Alert "Проект находится в разработке"-->
+                                <p>www.github.com</p>
+                                <a href="#cases" onClick="alert('Сайт сейчас находится в разработке. Наберитесь терпения)'); return false;">Посмотреть код</a> <!--добавить окно Alert "Проект находится в разработке"-->
                             </div>
                             <div class="col-12 col-md-9 description_right mt-3 mt-md-0">
                                 <h4>Готовый интернет-магазин под ключ</h4>
@@ -323,13 +256,6 @@ $(window).on('load', function () {
                 <option data-price="24000" data-time="9" value="Интернет-магазин">Интернет-магазин</option>
                 <option data-price="24000" data-time="9" value="Корпоративный сайт">Корпоративный сайт</option>
             </select>
-            <!--<div>Вы выбрали:</div>
-            <div class="list"></div>
-            <div>Стоимость: <span class="summ">0</span> руб.</div>
-            <!--закоментировать
-            <div>Вы выбрали:</div> 
-            <div class="list-day"></div>
-            <div>Время: <span class="summ-day">0</span> дней</div>-->
         </div>
         <h3>Дизайн</h3>
         <div class="box-select">
@@ -342,13 +268,6 @@ $(window).on('load', function () {
                 <option data-price="1000" data-time="2" value="Полиграфический">Полиграфический</option>
                 <option data-price="1000" data-time="3" value="Комбинированный">Комбинированный</option>
             </select>
-            <!--<div>Вы выбрали:</div>
-            <div class="list"></div>
-            <div>Стоимость: <span class="summ">0</span> руб.</div>
-            <!--закоментировать
-            <div>Вы выбрали:</div> 
-            <div class="list-day"></div>
-            <div>Время: <span class="summ-day">0</span> дней</div>-->
         </div>
         <h3>Адаптивность</h3>
         <div class="box-select">
@@ -358,125 +277,34 @@ $(window).on('load', function () {
                 <option data-price="2000" data-time="2" value="Компьютер + мобильная">Компьютер + мобильная</option>
                 <option data-price="1000" data-time="1" value="Отдельная мобильная вёрстка">Отдельная мобильная вёрстка</option>
             </select>
-            <!--<div>Вы выбрали:</div>
-            <div class="list"></div>
-            <div>Стоимость: <span class="summ">0</span> руб.</div>
-            <!--закоментировать
-            <div>Вы выбрали:</div> 
-            <div class="list-day"></div>
-            <div>Время: <span class="summ-day">0</span> дней</div>-->
         </div>
 
         <div class="price-calc">
             <p>
                 Сроки <span>&nbsp;дней</span>
                 <span class="total_span-day" id="total_span-day">0 </span>
-                <!--<span>(около) &nbsp;</span>-->
             </p>
             <p>
                 Стоимость <span>&nbsp;рублей</span>
                 <span class="total_span">0 </span>
-                <!--<span class="approx">(примерно) &nbsp;</span>-->
             </p>
         </div>
     </div> 
     <center class="price-button">
-        <!--<input type="button">Отправить заявку</button>-->
-        <button><a href="#contacts">Отправить заявку</a></button>
+        <div><a href="#contacts">Отправить заявку</a></div>
     </center>
     </section>
-    <!--js калькулятор (только цена, скрыть)-->
-    <script>
-        
-        /*деньги*/
-/*        (function() {
-            document.querySelectorAll('.box-select').forEach(e => {
-                e.querySelector('.select')/*.insertAdjacentHTML('afterBegin'/*, `<option disabled selected style="background-color: #cccaca;">Выберите пункт...</option>`)*/;
-/*                [...e.querySelector('.select').children].forEach((e,i) => e.dataset.id = i + 1 );
-            });
-        })();
-         
-        /*считаем деньги*/
-/*        function calc(e) {
-            let target = e.target.selectedOptions[0];
-            if (target.parentElement.classList.contains('select')) {
-                let summ = this.parentElement.querySelector('.summ');
-                let new_div = `<div class="position">${target.outerHTML.replace(/option/g,'span')}<span class="close">X</span></div>`;
-                target.disabled = true;
-                this.children[0].selected = true;
-                this.parentElement.querySelector('.list').insertAdjacentHTML('beforeEnd', new_div);
-                summ.textContent = +summ.textContent + +target.dataset.price; /*см. price/time*/
-/*            }
-            total();
-        }
-        /*считаем дни*/ /*
-        function calcDay(e) {
-            let target = e.target.selectedOptions[0];
-            if (target.parentElement.classList.contains('select')) {
-                let summ = this.parentElement.querySelector('.summ-day');
-                let new_div = `<div class="position-day">${target.outerHTML.replace(/option/g,'span')}<span class="close">X</span></div>`;
-                target.disabled = true;
-                this.children[0].selected = true;
-                this.parentElement.querySelector('.list-day').insertAdjacentHTML('beforeEnd', new_div);
-                summ.textContent = +summ.textContent + +target.dataset.time; /*см. price/time*//*
-            }
-            totalDay();
-        }*/
-         
-        /*удаляем деньги*/
-/*        function del(e) {
-            if (e.target.classList.contains('close')) {
-                let data_id = +e.target.previousElementSibling.dataset.id;
-                let parent = e.currentTarget.parentElement;
-                parent.querySelector(`.select [data-id="${data_id}"]`).disabled = false;
-                parent.querySelector(`.select`).children[0].selected = true;
-                parent.querySelector('.summ').textContent = +parent.querySelector('.summ').textContent - +e.target.previousElementSibling.dataset.price;
-                e.target.closest('.position').remove();
-            }
-            total();
-        }
-        /*удаляем дни*/ /*
-        function delDay(e) {
-            if (e.target.classList.contains('close')) {
-                let data_id = +e.target.previousElementSibling.dataset.id;
-                let parent = e.currentTarget.parentElement;
-                parent.querySelector(`.select [data-id="${data_id}"]`).disabled = false;
-                parent.querySelector(`.select`).children[0].selected = true;
-                parent.querySelector('.summ-day').textContent = +parent.querySelector('.summ-day').textContent - +e.target.previousElementSibling.dataset.time;
-                e.target.closest('.position-day').remove();
-            }
-            totalDay();
-        }*/
-         
-        /*общая сумма денег*/
-/*        function total() {
-            document.querySelector('.total_span').textContent = [...document.querySelectorAll('.summ')].map(e => +e.textContent).reduce((a,b) => a + b);
-        }
-         
-        document.querySelectorAll('.box-select .select').forEach(e => e.addEventListener('change', calc) );
-        document.querySelectorAll('.box-select .list').forEach(e => e.addEventListener('click', del) );
-
-        /*общая сумма дней*/ /*
-        function totalDay() {
-            document.querySelector('.total_span-day').textContent = [...document.querySelectorAll('.summ-day')].map(e => +e.textContent).reduce((a,b) => a + b);
-        }
-         
-        document.querySelectorAll('.box-select .select').forEach(e => e.addEventListener('change', calcDay) );
-        document.querySelectorAll('.box-select .list-day').forEach(e => e.addEventListener('click', delDay) );
-        */
-    </script>
-
-    <!--js Intersection Observer 2 применён в секции-->
+ 
     <section class="section"  id="statistics">
     <div class="statistics">
         <h2>Немного статистики</h2>
         <img src="img/line.png" alt="Черта заголовка">
-        <div class="achievements"> <!--animate__animated animate__heartBeat">-->
+        <div class="achievements">
             <ul>
                 <div>
                     <li>
                         <img src="img/stat-smile.png" alt="смайл">
-                        <h3 class="statAnimation">28</h3> <!--class="box box--grow"-->
+                        <h3 class="statAnimation">28</h3>
                         <h4>Счастливых заказчиков и постоянных клиентов</h4>
                     </li>
                     <li>
@@ -500,35 +328,7 @@ $(window).on('load', function () {
             </ul>
         </div>
     </div>
-    <!--</section>-->
     
-    <!--js Intersection Observer 1-->
-    <!--<script>
-        // функция всего лишь добавляет CSS-класс, который и осуществляет анимацию
-    const scrollImations = (entries, observer) => {
-      entries.forEach((entry) => {
-        // анимируем, если элемент целиком попадает в отслеживаемую область
-        if(entry.isIntersecting && entry.intersectionRatio == 1) {
-          entry.target.classList.add('box--visible');
-        } else {
-          entry.target.classList.remove('box--visible');
-        }
-      });
-    }
-    // создаём обсервер с параметрами
-    const options = {
-      threshold: 1.0,
-    };
-    const observer = new IntersectionObserver(scrollImations, options);
-
-    const boxes = document.querySelectorAll('.box');
-    boxes.forEach((box) => {
-      observer.observe(box);
-    });
-    </script>-->
-
-
-    <!--<section class="section reviews" id="feedback"> -->
         <div class="feedback reviews_container container"> 
             <h2>Отзывы</h2>
             <img src="img/line.png" alt="Черта заголовка">
@@ -591,12 +391,7 @@ $(window).on('load', function () {
        <div class="contacts">
                 <h2>Мои контакты</h2>
                 <img src="img/line.png" alt="Черта заголовка">
-                <p>
-                <!--
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-                    Eos quibusdam facere eum expedita maxime omnis?
-                -->
-                </p>
+                
                 <div class="con1">
                     <div>
                         <img src="img/geodata.png" alt="гео">
@@ -607,7 +402,7 @@ $(window).on('load', function () {
                     <div>
                         <img src="img/mail.png" alt="конверт">
                         <p>
-                            alexan2r@rambler.ru <!--(сделать новую)-->
+                            alexan2r@rambler.ru
                         </p>
                     </div>
                     <div>
@@ -628,7 +423,7 @@ $(window).on('load', function () {
                         <textarea name="yourtext" class="yourtext" value="" placeholder="Сообщение"></textarea>
                     </div>
                     <div>
-                        <input type="submit" class="last-button" value="Отправить"><!--submit-->
+                        <input type="submit" class="last-button" value="Отправить">
                     </div>
                 </form>
             </div>     
@@ -667,23 +462,24 @@ $(window).on('load', function () {
     </section>
 
     <footer>
-        <div class="copyright">
-            <div>Copyright © 2022 Александр Лобанов.</div>
-            <div>Design by Web.</div>
-        </div>
+        <section class="section" id="footer">
+            <div class="copyright">
+                <div>Copyright © 2022 Aleksandr Lobanov.</div>
+                <div>All rights reserved.</div> 
+            </div>
+        </section>
     </footer>
+    
 
     <script src="js/jquery-3.6.0.min.js.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="js/jquery.magnific-popup.min.js"></script> <!--всплывающие окна-->
-    <script src="js/jquery.maskedinput.min.js"></script> <!--маска на телефон-->
-    <script src="js/spin.js"></script> <!--class="statAnimation"?-->
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/jquery.maskedinput.min.js"></script>
+    <script src="js/spin.js"></script>
     <script src="js/wow.min.js"></script>
     <script>
     new WOW().init();
     </script>
     <script src="js/jqueryMain.js"></script>
-    <!--<script src="js/jsMain.js"></script> <!--выведение Alert-->
-
 </body>
 </html>

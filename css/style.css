@@ -15,7 +15,7 @@
     top: 0px;
     width: 100%;
     height: 100%;
-    z-index: 999999;/*влияет на плавность*/
+    z-index: 999999;
     display: flex;
     align-items: center;
     justify-content: center;  
@@ -154,7 +154,7 @@
 
 /*Начало страницы...........................................................................................................................*/
 body{
-    font-family: Arial, sans-serif;
+    font-family: "FranklinGot", sans-serif;
 }
 section{
     padding-top: 1px;
@@ -163,15 +163,14 @@ nav{
     width: 100%;
     height: 60px;
     background: #344051;
-    position: fixed; /*6 урок*/
+    position: fixed; 
     z-index: 1000;
 }
 .logo{
     color: #fff;
     font-size: 24px;
-    line-height: 60px;/*выравнивание по центру значение равное высоте блока*/
-    /*margin-left: 15%; /*398px; /*20%;*/
-    float: left; /*прижимает блок к левому краю*/
+    line-height: 60px;
+    float: left; 
     -webkit-animation: comming 5s ease;
     -o-animation: comming 5s ease;
     animation: comming 5s ease;
@@ -179,7 +178,6 @@ nav{
     font-family: 'FranklinGothic', sans-serif;
 }
 .logo:hover{
-    /*background: #42546e;/*#1c2534; фон кнопки!!!*/
     color: #e88604;
 }
 @keyframes comming{ 
@@ -196,7 +194,6 @@ main{
 }
 .menu{
     float: left;
-    /*margin-left: 15%; /*432px; /*22.5%;*/
 }
 .menu li{
     float: left;
@@ -229,7 +226,7 @@ main{
     transform: scale(1.2);
 }
 li .active{
-    color: #fa8b28 !important; /*перебор в Navbar*/
+    color: #fa8b28 !important;
 }
 .menu li:nth-child(2){
     animation-delay: 0.4s;
@@ -262,41 +259,17 @@ li .active{
 .main{
     display: inline-block;
     width: 100%;
-    height: 100%; /*calc(100% - 60px);*/
+    height: 100%; 
     background: url(../img/shadow.png)
-    0 calc(100% + 30px) no-repeat,/*тень*/ 
+    0 calc(100% + 30px) no-repeat, 
     url(../img/man.png)
-    85% 100%/auto 85% no-repeat, /*расположение длины и ширины/размер длины и ширины*/
+    85% 100%/auto 85% no-repeat,
     url(../img/bg-1hello.jpg)
-    center/cover no-repeat;/*фон*/
+    center/cover no-repeat;
+    filter: grayscale(30%);
 }
-/*.main_photo{
-    width: 100%;
-    height: 238px;
-    float: right;
-    background: url(../img/man.png)
-    95% 100%/auto 554px no-repeat;/*auto 85%*/
-  /*  -webkit-animation: photomove 1s ease forwards;
-    -o-animation: photomove 1s ease forwards;
-    animation: photomove 1s ease forwards;
-    -webkit-animation-delay: 3s;
-    -o-animation-delay: 3s;
-    animation-delay: 3s;
-    opacity: 0;
-}
-@keyframes photomove{
-    from{
-        opacity: 0;
-        margin-right: -300px;
-    }
-    to{
-        opacity: 1;
-        margin-right: 1px;
-    }
-}*/
 .title__container{
     float: left;
-   /* margin: 232px 0 0 232px; /*432px 0px 0px 404px;*/
     color: #2c384a;
     text-align: center;
     width: 100%;
@@ -310,29 +283,28 @@ li .active{
 }
 .title__container h1{
     font-family: 'FranklinGothic', sans-serif;
-    font-size: 45px; /*60px*/
+    font-size: 45px;
     font-weight: 600;
 }
 .title__container h4{
-    margin-top: 15px;/*40px;*/
-    font-size: 19px;/*22px;*/
+    margin-top: 15px;
+    font-size: 19px;
     color: #79818d;
 }
 
-.title__container input{ /*важное и простое оформление*/
+.title__container input{
     display: none;
     text-align: center;
-    height: 34px; /*40px;*/
+    height: 34px;
     border: 2px solid #6d7682;
     border-radius: 5px;
     background: none;
     color: #6d7682;
     font-size: 13px;
-    padding: 0 13px; /*0 16px;*/
-    margin: 24px 9px 0 9px;/*58px 14px 0 14px;*/
+    padding: 0 13px;
+    margin: 24px 9px 0 9px;
 }
 .title__container input{
-    /*transition: all 1s;*/
     transform: scale(1);
 }
 .title__container input:hover{
@@ -373,7 +345,7 @@ li .active{
     }
     to{
         opacity: 1;
-        margin-left: 0; /*232px;*/
+        margin-left: 0;
     }
 }
 .custom-css3{
@@ -381,7 +353,7 @@ li .active{
 }
 @media (max-width: 768px){
     .logo{
-        -webkit-animation: comming 0s ease; /*дребезжание хедера*/
+        -webkit-animation: comming 0s ease;
         -o-animation: comming 0s ease;
         animation: comming 0s ease;
         padding-left: 15%;
@@ -397,18 +369,13 @@ li .active{
         border: 2px solid #fff;
     }
     .title__container{
-        -webkit-animation: titlemove 0s ease forwards;/*появление имя/фамилии*/
+        -webkit-animation: titlemove 0s ease forwards;
         -o-animation: titlemove 0s ease forwards;
         animation: titlemove 0s ease forwards;
         -webkit-animation-delay: 0s;
         -o-animation-delay: 0s;
         animation-delay: 0s;
     }
-    /*.menu li{
-        -webkit-animation: topshift 0s ease forwards;
-        -o-animation: topshift 0s ease forwards;
-        animation: topshift 0s ease forwards;
-    }*/
     .main{
         position: relative;
     }
@@ -453,23 +420,28 @@ li .active{
 .aboutme .img1{
     margin: 2% 0 2%;
     width: 200px;
-    height: 240px;
+    height: 200px;
     border-radius: 100px;
+    border: 1px solid rgb(211, 207, 207);
     -webkit-filter: grayscale(100%);
     -o-filter: grayscale(100%);
     filter: grayscale(100%);
 }
 .aboutmeinfo p{
-    margin: auto; /*центр*/
+    margin: auto; 
     padding-bottom: 34px;
     width: 50%;
     font-size: 17px;
     text-align: justify;
     color: #3f495a;
 }
+.aboutme-button{
+    display: flex;
+    justify-content: center;
+}
 .aboutme-button a{
     margin: 0 12px;
-    padding: 7px 10px;
+    padding: 3px 10px;
     text-decoration:none;
     height: 34px;
     font-size: 16px;
@@ -488,6 +460,14 @@ li .active{
     transition: all 0.5s;
 }
 @media (max-width: 768px){
+    .aboutme-button{
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    .aboutme-button a{
+        margin-top: 9px;
+        width: 240px;
+    }
     .aboutme h2{
         margin: 8% 0 16px;
         font-size: 23px;
@@ -497,6 +477,9 @@ li .active{
     }
 }
 @media (max-width: 425px){
+    .aboutmeinfo p{
+        text-align: center;
+    }
     .img1{
         width: 40%;
         height: 40%;
@@ -507,13 +490,13 @@ li .active{
 
 .cando{
     text-align: center;
-    height: 550px; /*520px*/
     background: url(../img/bg-2cando.jpg)
-    center/100% 550px no-repeat;
+    center/cover no-repeat;
+    padding-bottom: 20px;
 }
 .cando h2{
     margin: 97px 0 33px 0;
-    padding-top: 95px;
+    padding-top: 85px;
     font-size: 33px;
     text-transform: uppercase;
     color: #263244;
@@ -521,7 +504,6 @@ li .active{
 .skills ul{
     display: flex;
     justify-content: center;
-    /*margin-left: 15%; /*416px;*/
     margin-top: 90px;
 }
 .skills ul div{
@@ -530,13 +512,14 @@ li .active{
 .skills li{
     text-align: center;
     width: 200px;
-    margin-right: 5%;/*82px;*/
+    height: 250px;
+    margin-right: 5%;
 }
 .skills li img{
     width: 50px;
     height: 50px;
 }
-.skills li img:hover{ /*анимация при наведении*/
+.skills li img:hover{
     animation: rubberBand;
     animation-duration: 2s;
 }
@@ -550,11 +533,6 @@ li .active{
     color: #3f495a;
 }
 @media (max-width: 768px){
-    .cando{
-        height: 640px; 
-        background: url(../img/bg-2cando.jpg)
-        center/100% 640px no-repeat;
-    }
     .cando h2{
         margin: 65px 0 16px;
         padding-top: 35px;
@@ -565,15 +543,10 @@ li .active{
         padding-left: 0;
     }
     .skills ul div{
-        flex-direction: column; /*ранее задан флекс,*/
+        flex-direction: column;
     }
 }
 @media (max-width: 425px){ 
-    .cando{
-        height: 1130px; 
-        background: url(../img/bg-2cando-mobile.jpg)
-        center/100% repeat-y;
-    }
     .skills ul{
         display: block;
         justify-content: center;
@@ -585,7 +558,6 @@ li .active{
         align-items: center;
     }
 }
-/*отложенная анимация 1 / Itersection observer 1*/
 .box{
     transition: transform 2s ease-in;
 }
@@ -600,7 +572,7 @@ li .active{
 
 .cases{
     text-align: center;
-    margin: 0 15%;
+    margin: 0 10%;
     height: auto;
 }
 .cases h2{
@@ -628,10 +600,6 @@ li .active{
 .carousel-control-next-icon, .carousel-control-prev-icon{
    background-color: #ff6c00; 
 }
-/* скрыть три линии на слайдере
-.carousel-indicators{
-    display: none;
-}*/
 .description_left h3{
     font-size: 25px;
     text-align: left;
@@ -644,8 +612,8 @@ li .active{
 .description_left a{
     margin-top: 15px;
     display: block;
-    width: 100%;
-    background: #63b5ae;
+    width: 116%;
+    background: #e88604;
     height: 44px;
     line-height: 44px;
     text-align: center;
@@ -657,7 +625,7 @@ li .active{
     transform: scale(1);
 }
 .description_left a:hover{
-    background: #4e938d;
+    background: #d17700;
 }
 .description_right h4{
     font-size: 25px;
@@ -672,7 +640,13 @@ li .active{
 @media (max-width: 768px){
     .carousel-control-next, 
     .carousel-control-prev{
-        height: 25%;
+        height: 40%;
+    }
+    .description_left a {
+        width: 100%;
+    }
+    .description_right h4{
+        height: 55px;
     }
 }
 @media (max-width: 425px) {
@@ -711,19 +685,11 @@ li .active{
     color: #1c2534;
     text-transform: uppercase;
 }
-/*
-.price .type{
-    padding-right: 201px;
-}
-.price .design{
-    padding-right: 216px;
-}*/
 .price select{
     font-size: 16px;
-    width: 90%;
+    width: 85%;
     color: #737373;
     margin: 0 0 20px 30px;
-   /* padding-right: 125px;*/
 }
 .price-calc{
     margin-top: 58px;
@@ -775,7 +741,7 @@ li .active{
     color: #1c2534;
 
 }
-.price-button button{ /*пример идеальной кнопки с ссылкой*/
+.price-button div{
     margin-top: 25px;
     text-align: center;
 }
@@ -794,7 +760,7 @@ li .active{
     background: #6f707e;
     transition: all 0.3s;
 }
-.price-button button:active{
+.price-button div:active{
     transform: scale(1.1);
     transition: all 0.5s;
 }
@@ -812,17 +778,16 @@ li .active{
         font-size: 17px;
         margin: 50px auto 23px;
     }
-    
 }
 
 /*ОКНО 6 Немного статистики......................................................................*/
 
 .statistics{
     text-align: center;
-    height: 530px;
     background: url(../img/bg-3statistics.jpg)
-    center/120% 530px no-repeat; /*для адаптации на мобиле увеличить %*/
+    center/cover no-repeat;
     margin-top: 155px;
+    padding-bottom: 30px;
     background-attachment: fixed;
 }
 .statistics h2{
@@ -832,7 +797,6 @@ li .active{
     color: #263244;
 }
 .achievements ul{
-    /*margin-left: 15%; /*416px;*/
     display: flex;
     justify-content: center;
     margin-top: 90px;
@@ -843,7 +807,8 @@ li .active{
 .achievements li{
     text-align: center;
     width: 208px;
-    margin-right: 3% 6% 0 0;/*82px;*/
+    height: 180px;
+    margin: 3% 0 8% 0;
 }
 .achievements li img{
     width: 55px;
@@ -866,24 +831,19 @@ li .active{
 }
 
 @media (max-width: 768px){
-    .statistics{
-        height: 515px;
-        background: url(../img/bg-3statistics.jpg)
-        center/190% 515px no-repeat;
-    }
     .achievements ul{
         margin-top: 50px;
         padding-left: 0;
     }
     .achievements ul div{
-        flex-direction: column; /*ранее задан флекс,*/
+        flex-direction: column; 
     }
     .statistics h2{
         padding: 65px 0 16px 0;
         font-size: 23px;
     }
     .achievements h3{
-        margin: 23px auto 20px;
+        margin: 12px auto 12px;
         font-size: 27px;
     }
     .achievements h4{
@@ -891,11 +851,6 @@ li .active{
     }
 }
 @media (max-width: 425px){ 
-    .statistics{
-        height: 815px;
-        background: url(../img/bg-3statistics.jpg)
-        center/310% 850px no-repeat;
-    }
     .achievements ul{
         display: block;
         justify-content: center;
@@ -906,18 +861,9 @@ li .active{
         align-items: center;
     }
 }
-/*отложенная анимация 2 / Itersection observer 2*/
-/*
-.box{
-    transition: transform 2s ease-in;
-}
-.box--spin.box--visible{
-    transform: rotate(720deg);
-}
-.box--grow.box--visible{
-    transform: scale(1.5);
-}*/
+
 /*ОКНО 7 Отзывы..................................................................................*/
+
 .feedback{
     text-align: center;
 }
@@ -972,10 +918,6 @@ li .active{
 .review_author span{
     font-weight: 800;
 }
-/*Корректировки слайдера*/
-.justify-content-center {
-    margin-top: 15px;
-}
 #carouselReview .carousel-indicators {
     margin-bottom: -5px;
 }
@@ -998,7 +940,7 @@ li .active{
         padding-bottom: 5px;
     }
     .feedback h2{
-        margin-top: 90px;
+        margin-top: 20px;
     }
     .feedback p{
         height: 145px;
@@ -1012,11 +954,10 @@ li .active{
 
 .contacts{
     text-align: center;
-    height: 808px;
-    /*background: url(https://catherineasquithgallery.com/uploads/posts/2021-02/1612486159_10-p-noutbuk-na-serom-fone-13.jpg) center/100% 808px no-repeat;*/
     background: url(../img/bg-4contacts.jpg)
-    center/100% 808px no-repeat; /*вместо auto поставить 100%*/
+    center/cover no-repeat;
     margin-top: 58px;
+    padding-bottom: 80px;
     color: #fff;
 }
 .contacts h2{
@@ -1029,8 +970,6 @@ li .active{
     font-size: 16px;
 }
 .con1{
-    /*width: 60%;
-    margin: 0 20%;*/
     justify-content: center;
     display: flex;
 }
@@ -1068,7 +1007,7 @@ li .active{
     margin-right: 29px;
 }
 .yourtext{
-    display: flex;       /*display: flex + margin: 0 auto; - выравнивание*/
+    display: flex;
     margin: 20px auto;
     height: 100px;
     width: 689px;
@@ -1081,7 +1020,7 @@ li .active{
     border: 2px solid #fff;
     border-radius: 5px;
     padding: 10px;
-    font-size: 16px;/*измерить*/
+    font-size: 16px;
     transform: scale(1);
     transition: all 0.3s;
 }
@@ -1093,6 +1032,9 @@ li .active{
 .last-button:active{
     transform: scale(1.1);
 }
+.social_media{
+    display: none; 
+}
 .social_media ul{
     display: flex;
     margin: 30px auto;
@@ -1100,6 +1042,9 @@ li .active{
 }
 .social_media li:not(:last-child){
     margin-right: 55px;
+}
+.workplace{
+    margin-top: 6px;
 }
 @media (max-width: 768px){
     .contacts h2 {
@@ -1131,13 +1076,16 @@ li .active{
         flex-direction: column;
         align-items: center;
     }
+    .con1 p {
+        margin-top: 5px;
+    }
     .con1 div:not(:last-child){
         margin-right: 0;
+        margin-top: 35px;
     }
     .contacts{
-        height: 890px;
         background: url(../img/bg-4contacts.jpg) 
-        center/180% 890px no-repeat;
+        center/cover no-repeat;
         margin-top: 91px;
     }
     .message h3 {
@@ -1146,7 +1094,7 @@ li .active{
     .yourname, 
     .yourmail, 
     .yourtext{ 
-        width: 270px;
+        width: 90%;
     }
     .social_media li:not(:last-child) {
         margin-right: 15px
@@ -1155,9 +1103,6 @@ li .active{
 
 /*ОКНО 9 Футер.................................................................................*/
 
-.workplace{
-    margin-top: 6px;
-}
 .copyright{
     display: flex;
     justify-content: center;
